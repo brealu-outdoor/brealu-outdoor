@@ -1,0 +1,6 @@
+deploy.ps1
+github_credentials.txt
+*.mp4
+*.pdf
+brochure_images/
+.accio/
