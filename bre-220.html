@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRE-220 Technical Specifications | Heavy-Duty Bio-Climatic System | Brealu Outdoor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004A99;
+            --accent: #FF6600;
+            --dark: #0F172A;
+            --tech-gray: #F1F5F9;
+            --border: #E2E8F0;
+            --text-main: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); line-height: 1.6; background: #fff; }
+        h1, h2, h3, .pdp-price { font-family: 'Outfit', sans-serif; color: var(--dark); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navigation */
+        nav { background: #fff; height: 80px; display: flex; align-items: center; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+        .logo img { height: 40px; }
+        
+        /* PDP Header */
+        .pdp-header { padding: 60px 0; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
+        .gallery-main { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 15px; background: #f8f8f8; }
+        .gallery-main img { width: 100%; display: block; }
+        .thumb-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+        .thumb { border-radius: 4px; overflow: hidden; border: 2px solid transparent; cursor: pointer; aspect-ratio: 1; }
+        .thumb.active { border-color: var(--primary); }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Technical Info Panel */
+        .info-panel { padding: 10px; }
+        .sku-tag { background: var(--tech-gray); padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 15px; display: inline-block; }
+        h1 { font-size: 2.4rem; margin-bottom: 20px; line-height: 1.1; }
+        .short-desc { font-size: 1.05rem; color: #64748b; margin-bottom: 30px; }
+
+        .tech-spec-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        .tech-spec-table td { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        .tech-spec-table td:first-child { font-weight: 700; color: var(--dark); width: 40%; }
+        
+        .cta-box { background: var(--tech-gray); padding: 30px; border-radius: 12px; }
+        .btn-inquire { background: var(--accent); color: white; text-align: center; display: block; padding: 18px; border-radius: 6px; text-decoration: none; font-weight: 800; font-size: 1.1rem; transition: 0.3s; }
+        .btn-inquire:hover { background: #e65c00; transform: translateY(-2px); }
+
+        /* Engineering Sections */
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; position: relative; padding-bottom: 15px; }
+        .section-title h2::after { content: ''; width: 60px; height: 4px; background: var(--primary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        .tech-block { margin-bottom: 100px; }
+        .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .tech-content h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+        .tech-content p { margin-bottom: 20px; font-size: 1rem; color: #475569; }
+        .tech-image { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .tech-image img { width: 100%; display: block; }
+
+        /* Data Grid */
+        .data-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+        .data-card { background: var(--tech-gray); padding: 25px; border-radius: 8px; text-align: center; border: 1px solid var(--border); }
+        .data-val { font-size: 1.8rem; font-weight: 900; color: var(--primary); display: block; }
+        .data-label { font-size: 0.75rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-top: 5px; }
+
+        /* Feature Matrix */
+        .matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .matrix-item { padding: 30px; border: 1px solid var(--border); border-radius: 12px; transition: 0.3s; }
+        .matrix-item:hover { border-color: var(--primary); background: var(--tech-gray); }
+        .matrix-icon { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        .matrix-item h4 { margin-bottom: 10px; font-size: 1.1rem; }
+
+        /* Comparison Section */
+        .comp-section { background: var(--dark); color: #fff; padding: 80px 0; border-radius: 20px; margin: 100px 0; }
+        .comp-table { width: 100%; border-spacing: 0; margin-top: 40px; }
+        .comp-table th { padding: 20px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: #94a3b8; }
+        .comp-table td { padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .high-light { color: var(--accent); font-weight: 700; }
+
+        /* Global Project Map */
+        .project-map { background: url('https://sc01.alicdn.com/kf/H63dd8a545afc423f907a2138d1f2bf7a1.jpg') center no-repeat; background-size: cover; height: 500px; border-radius: 12px; margin: 60px 0; display: flex; align-items: flex-end; padding: 40px; }
+        .map-card { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 8px; max-width: 400px; backdrop-filter: blur(10px); }
+
+        footer { background: var(--dark); color: #94a3b8; padding: 80px 0 40px; }
+        .f-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; }
+        .f-title { color: #fff; margin-bottom: 20px; font-size: 1.1rem; }
+        .f-links { list-style: none; }
+        .f-links li { margin-bottom: 10px; }
+        .f-links a { color: inherit; text-decoration: none; }
+
+        @media (max-width: 992px) {
+            .pdp-header, .tech-grid, .matrix-grid, .data-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo"></a>
+        </div>
+    </nav>
+
+    <div class="container pdp-header">
+        <div class="gallery">
+            <div class="gallery-main"><img src="https://sc01.alicdn.com/kf/Hb7de7800317d433384b8e1dc093acc55d.jpg" alt="BRE-220 Heavy Duty"></div>
+            <div class="thumb-grid">
+                <div class="thumb active"><img src="https://sc01.alicdn.com/kf/Hb7de7800317d433384b8e1dc093acc55d.jpg"></div>
+                <div class="thumb"><img src="https://sc01.alicdn.com/kf/H5543233bb1514d898e18976b46babe60O.jpg"></div>
+                <div class="thumb"><img src="https://sc01.alicdn.com/kf/H4289631d12dd42f5bc50fb76f45d109fv.jpg"></div>
+                <div class="thumb"><img src="https://sc01.alicdn.com/kf/H02d8b90a1e3e4d2c9aa6eb43d91da64ec.jpg"></div>
+                <div class="thumb"><img src="https://sc01.alicdn.com/kf/H6d5f6f50ed5d4ccfb3b595d98387d143I.jpg"></div>
+                <div class="thumb"><img src="https://sc01.alicdn.com/kf/H63dd8a545afc423f907a2138d1f2bf7a1.jpg"></div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <span class="sku-tag">PREMIUM SERIES / BRE-220</span>
+            <h1>Brealu New BRE-220<br>Motorized Louver Pergola</h1>
+            <p class="short-desc">The industry-standard Bio-climatic system for heavy-duty commercial and luxury residential projects. Engineered for extreme wind resistance and modular versatility.</p>
+            
+            <table class="tech-spec-table">
+                <tr><td>Material</td><td>High-tensile 6063-T5 Aluminum</td></tr>
+                <tr><td>Wall Thickness</td><td>3.0mm Reinforced Profile</td></tr>
+                <tr><td>Wind Resistance</td><td>170 - 200 KM / H</td></tr>
+                <tr><td>Snow Loading</td><td>80 - 90 CM Static Load</td></tr>
+                <tr><td>Standard Sizes</td><td>3x3m, 3x4m, 4x4m, 4x5m, 4x6m</td></tr>
+                <tr><td>Color Options</td><td>RAL 9005, 7016, 9016, Wood Grain</td></tr>
+            </table>
+
+            <div class="cta-box">
+                <a href="#contact" class="btn-inquire">SEND TECHNICAL INQUIRY</a>
+                <p style="text-align:center; font-size:0.75rem; color:#94a3b8; margin-top:15px; font-weight:700;"><i class="fas fa-check-double"></i> 24H DESIGN BLUEPRINT SERVICE</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 Core Mastery -->
+    <section class="section bg-gray" style="padding: 100px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>6 Core Architectural Values</h2>
+                <p>A comprehensive engineering suite for ultimate outdoor comfort.</p>
+            </div>
+            <div class="matrix-grid">
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Hurricane Rated</h4>
+                    <p>Designed to withstand wind speeds up to 200km/h, ensuring safety in coastal regions.</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-tint-slash"></i></div>
+                    <h4>100% Watertight</h4>
+                    <p>Dual-layer interlocking louvers with integrated internal gutter drainage system.</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-snowflake"></i></div>
+                    <h4>Heavy Snow Load</h4>
+                    <p>Reinforced beams and louvers support up to 90cm of static snow accumulation.</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>Smart Control</h4>
+                    <p>Support Smartphone APP, remote control, and rain/wind sensor automation.</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-tools"></i></div>
+                    <h4>3H Fast Assembly</h4>
+                    <p>Modular component design allows 2 people to finish basic installation in 3 hours.</p>
+                </div>
+                <div class="matrix-item">
+                    <div class="matrix-icon"><i class="fas fa-palette"></i></div>
+                    <h4>Full Customization</h4>
+                    <p>Adaptable sizes, RAL colors, and side-enclosure mounting accessories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structural Integrity -->
+    <section class="section tech-block" style="padding-top: 100px;">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-content">
+                    <span class="sku-tag">ENGINEERING DETAIL</span>
+                    <h3>The Art of Structural Mastery</h3>
+                    <p>Every BRE-220 system is built on a foundation of 6063-T5 aviation-grade aluminum. Our 3.0mm wall thickness is 40% thicker than industry standards, preventing structural warping over long spans.</p>
+                    <div class="data-grid">
+                        <div class="data-card"><span class="data-val">3.0mm</span><span class="data-label">Thickness</span></div>
+                        <div class="data-card"><span class="data-val">200km/h</span><span class="data-label">Wind Limit</span></div>
+                        <div class="data-card"><span class="data-val">20yr</span><span class="data-label">Warranty</span></div>
+                        <div class="data-card"><span class="data-val">Akzo</span><span class="data-label">Coating</span></div>
+                    </div>
+                </div>
+                <div class="tech-image">
+                    <img src="https://sc01.alicdn.com/kf/H8d0e156c5aec4821992ae5b6edbda184t.jpg" alt="Structure Detail">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Proof: Images as Proof -->
+    <section class="section tech-block bg-gray" style="padding: 100px 0;">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-image">
+                    <img src="https://sc01.alicdn.com/kf/H4289631d12dd42f5bc50fb76f45d109fv.jpg" alt="Performance Test">
+                </div>
+                <div class="tech-content">
+                    <h3>Extreme Performance Validation</h3>
+                    <p>We don't just claim performance; we prove it. The BRE-220 has undergone rigorous wind tunnel and static load testing to ensure it thrives in the world's most demanding environments.</p>
+                    <ul style="list-style: none; font-weight: 700;">
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Hurricane resistance verified at 170-200 km/h.</li>
+                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Snow loading capacity up to 900kg/m².</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px;"></i> Intelligent motor tested for 20,000+ cycles.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tech-grid" style="margin-top: 60px;">
+                <div class="tech-content">
+                    <h3>Smart Drainage & Assembly</h3>
+                    <p>Rainwater is seamlessly managed through our perimeter gutter system, which is hidden within the main beams and exits through the posts, keeping the space underneath 100% dry.</p>
+                </div>
+                <div class="tech-image">
+                    <img src="https://sc01.alicdn.com/kf/H56f86f0f4d8e4524a1aa267885f22113P.jpg" alt="Drainage Detail">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="container comp-section">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #fff;">Brealu vs. Market Standard</h2>
+        </div>
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>Brealu BRE-220</th>
+                    <th>Standard Pergola</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Profile Wall Thickness</td><td class="high-light">3.0 mm Reinforced</td><td>1.2 - 1.8 mm</td></tr>
+                <tr><td>Blade Structure</td><td class="high-light">Dual-Layer Interlocking</td><td>Single-Layer Flat</td></tr>
+                <tr><td>Waterproof Efficiency</td><td class="high-light">100% (Perimeter Gutter)</td><td>Partial (Splashing)</td></tr>
+                <tr><td>Surface Treatment</td><td class="high-light">AkzoNobel Grade</td><td>Generic Powder</td></tr>
+                <tr><td>Warranty (Structure)</td><td class="high-light">20 Years</td><td>3-5 Years</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Project Showcase -->
+    <div class="container">
+        <div class="section-title">
+            <h2>Global Execution</h2>
+            <p>From the Nordics to Australia, our systems redefine outdoor space.</p>
+        </div>
+        <div class="project-map">
+            <div class="map-card">
+                <h4>Proven in 100+ Countries</h4>
+                <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;">Brealu New systems have been successfully deployed in diverse climates, handling arctic snow, tropical rain, and desert heat.</p>
+                <a href="#" style="color: var(--primary); font-weight: 800; text-decoration: none; display: block; margin-top: 15px;">VIEW CASE STUDIES <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="section bg-gray" style="margin-top: 80px;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical FAQ</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-row">
+                    <h4>What's the lead time for custom projects? <i class="fas fa-plus"></i></h4>
+                    <p>Standard sizes ship in 7-10 days. Fully customized projects typically require 15-25 days from design approval to factory dispatch.</p>
+                </div>
+                <div class="faq-row">
+                    <h4>Do you provide installation support? <i class="fas fa-plus"></i></h4>
+                    <p>Yes. Every order includes a custom 3D installation blueprint and a step-by-step video guide. Our engineers are also available for remote consultation.</p>
+                </div>
+                <div class="faq-row">
+                    <h4>Can I add side screens later? <i class="fas fa-plus"></i></h4>
+                    <p>Absolutely. The BRE-220 frame is designed for modularity, allowing you to add Zip screens, glass doors, or aluminum shutters at any time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="f-grid">
+                <div>
+                    <div class="f-logo"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu"></div>
+                    <p>Professional outdoor architectural solutions engineered for global performance.</p>
+                </div>
+                <div>
+                    <h4 class="f-title">Products</h4>
+                    <ul class="f-links">
+                        <li><a href="bre-r230.html">BRE-R230</a></li>
+                        <li><a href="bre-220.html">BRE-220</a></li>
+                        <li><a href="#">BRE-175U</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="f-title">Company</h4>
+                    <ul class="f-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Certificates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="f-title">Contact</h4>
+                    <p>boaz@brealuoutdoor.com</p>
+                    <p>+86 17812581015</p>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <p>&copy; 2026 Brealu Outdoor Systems. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
