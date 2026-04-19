@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/outdoor-kitchen-v1-alunotec.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/outdoor-kitchen-v1-alunotec.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/outdoor-kitchen-v1-alunotec.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/outdoor-kitchen-v1-alunotec.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Kitchen Series | Brealu Outdoor - Modular Professional Solutions</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --accent: #FF6600;
+            --dark: #111111;
+            --border: #e6e6e6;
+            --light-bg: #f8f8f8;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; background: #fff; }
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--dark); }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Header --- */
+        header { padding: 15px 0; border-bottom: 2px solid var(--primary); background: white; sticky; top: 0; z-index: 1000; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 44px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- Hero Section --- */
+        .hero { 
+            position: relative; 
+            height: 450px; 
+            background: url('https://sc01.alicdn.com/kf/H641babf4b2a644b894b3e361313d8fbdN.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .hero-overlay { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero h1 { font-size: 3rem; color: white; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9; }
+
+        /* --- Breadcrumb --- */
+        .breadcrumb { padding: 15px 0; font-size: 0.85rem; color: #888; border-bottom: 1px solid #eee; margin-bottom: 30px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb span { margin: 0 8px; }
+
+        /* --- Content Layout --- */
+        .content-layout { display: flex; gap: 40px; margin-bottom: 80px; }
+        .sidebar { width: 280px; flex-shrink: 0; }
+        .main-content { flex-grow: 1; }
+
+        /* --- Sidebar Widgets --- */
+        .sidebar-widget { margin-bottom: 30px; border: 1px solid var(--border); }
+        .widget-title { background: #fdfdfd; padding: 15px; border-bottom: 2px solid var(--primary); font-weight: 700; }
+        .sidebar-nav { list-style: none; }
+        .sidebar-nav li a { display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; text-decoration: none; color: #333; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        .sidebar-nav li a:hover { background: var(--light-bg); color: var(--primary); }
+        .sidebar-nav li a.active { color: var(--accent); font-weight: 700; }
+
+        /* --- Series Cards --- */
+        .series-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 60px; }
+        .series-card { border: 1px solid var(--border); transition: var(--transition); display: flex; flex-direction: column; }
+        .series-card:hover { border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .series-img { aspect-ratio: 4/3; overflow: hidden; background: #eee; }
+        .series-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .series-card:hover .series-img img { transform: scale(1.05); }
+        .series-info { padding: 25px; flex-grow: 1; }
+        .series-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--primary); letter-spacing: 1px; margin-bottom: 10px; display: block; }
+        .series-info h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .series-info p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        
+        .series-specs { list-style: none; margin-bottom: 25px; border-top: 1px solid #eee; padding-top: 15px; }
+        .series-specs li { font-size: 0.85rem; display: flex; justify-content: space-between; padding: 5px 0; }
+        .series-specs li span { color: #888; }
+        .series-specs li strong { color: var(--dark); }
+
+        .btn-view { display: block; width: 100%; padding: 12px; text-align: center; background: var(--primary); color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: var(--transition); }
+        .btn-view:hover { background: var(--dark); }
+
+        /* --- Features Section --- */
+        .tech-section { background: var(--light-bg); padding: 80px 0; margin-bottom: 80px; }
+        .section-header { text-align: center; max-width: 800px; margin: 0 auto 50px; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .tech-item { text-align: center; padding: 30px; background: white; border-radius: 4px; border: 1px solid #eee; }
+        .tech-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .tech-item h4 { font-size: 1.2rem; margin-bottom: 10px; }
+        .tech-item p { font-size: 0.9rem; color: #666; }
+
+        /* --- Comparison Matrix --- */
+        .comparison-section { margin-bottom: 100px; }
+        .comparison-table-wrapper { overflow-x: auto; margin-top: 40px; }
+        table { width: 100%; border-collapse: collapse; min-width: 800px; border: 1px solid #eee; }
+        th { background: #fdfdfd; padding: 20px; text-align: left; border-bottom: 2px solid var(--primary); font-family: 'Outfit'; }
+        td { padding: 18px 20px; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        tr:nth-child(even) { background: #fafafa; }
+        .check-icon { color: #27ae60; font-weight: bold; }
+        .cross-icon { color: #e74c3c; font-weight: bold; }
+
+        /* --- Footer --- */
+        footer { background: #111; color: white; padding: 80px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        .footer-logo img { height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1); }
+        .footer-col h4 { color: white; margin-bottom: 25px; font-size: 1.1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: #999; text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+        .footer-col ul li a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 30px; text-align: center; color: #555; font-size: 0.8rem; }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        .nav-links .dropdown { top: 100% !important; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+        
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; }
+        @media (max-width: 1280px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="https://sc01.alicdn.com/kf/Haf3ab1463980456ab3ddf151c94971a6l.jpg" alt="Brealu Logo"></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="pergola-v3-alunotec.html">Pergola</a>
+                <a href="outdoor-kitchen-v3-alunotec.html" style="color:var(--primary);">Cuisine Extérieure</a>
+                <a href="pergola-comparison.html">Comparison</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Outdoor Kitchen Series</h1>
+                <p>Gastronomy-Engineered. Modular Masterpieces. The ultimate centerpiece for your professional outdoor living space.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Accueil</a> <span>/</span> 
+            <a href="#">Products</a> <span>/</span> 
+            Outdoor Kitchen
+        </nav>
+
+        <div class="content-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <div class="widget-title">Categories</div>
+                    <ul class="sidebar-nav">
+                        <li><a href="pergola-v3-alunotec.html">Bioclimatic Pergola <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="outdoor-kitchen-v1-alunotec.html" class="active">Outdoor Kitchen <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">Aluminum Carport <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#">Zip Screen <i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="series-grid">
+                    <!-- BRE-Lite -->
+                    <article class="series-card">
+                        <div class="series-img">
+                            <img src="https://sc01.alicdn.com/kf/H76295831f13b48228945487771618392X.jpg" alt="BRE-Lite">
+                        </div>
+                        <div class="series-info">
+                            <span class="series-tag">Efficiency & Value</span>
+                            <h3>BRE-Lite Modular</h3>
+                            <p>Compact, DIY-friendly straight layout for balconies and small patios.</p>
+                            <ul class="series-specs">
+                                <li><span>Modules</span> <strong>3-4 Units</strong></li>
+                                <li><span>Main Material</span> <strong>6063-T5 Aluminum</strong></li>
+                                <li><span>Countertop</span> <strong>304 Stainless Steel</strong></li>
+                                <li><span>Installation</span> <strong>100% DIY Friendly</strong></li>
+                            </ul>
+                            <a href="#" class="btn-view">Voir les Détails</a>
+                        </div>
+                    </article>
+
+                    <!-- BRE-Lux -->
+                    <article class="series-card">
+                        <div class="series-img">
+                            <img src="https://sc01.alicdn.com/kf/H8725831f13b48228945487771618392X.jpg" alt="BRE-Lux">
+                        </div>
+                        <div class="series-info">
+                            <span class="series-tag">Premium & Flexible</span>
+                            <h3>BRE-Lux Social</h3>
+                            <p>The perfect L-shaped hub for family gatherings and weekend BBQs.</p>
+                            <ul class="series-specs">
+                                <li><span>Modules</span> <strong>5-6 Units</strong></li>
+                                <li><span>Main Material</span> <strong>Mixed Steel/Alu</strong></li>
+                                <li><span>Countertop</span> <strong>Sintered Stone</strong></li>
+                                <li><span>Features</span> <strong>Fridge & Sink Incl.</strong></li>
+                            </ul>
+                            <a href="#" class="btn-view">Voir les Détails</a>
+                        </div>
+                    </article>
+
+                    <!-- BRE-Ultra -->
+                    <article class="series-card">
+                        <div class="series-img">
+                            <img src="https://sc01.alicdn.com/kf/H9825831f13b48228945487771618392X.jpg" alt="BRE-Ultra">
+                        </div>
+                        <div class="series-info">
+                            <span class="series-tag">Luxury & Mastery</span>
+                            <h3>BRE-Ultra Master</h3>
+                            <p>Architectural island layout. Professional grade for estate living.</p>
+                            <ul class="series-specs">
+                                <li><span>Modules</span> <strong>7+ Custom Units</strong></li>
+                                <li><span>Main Material</span> <strong>Full 304/316 Steel</strong></li>
+                                <li><span>Countertop</span> <strong>Dekton Luxury</strong></li>
+                                <li><span>Features</span> <strong>Wine Cellar & Pizza Oven</strong></li>
+                            </ul>
+                            <a href="#" class="btn-view">Voir les Détails</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Comparison Matrix -->
+                <div class="comparison-section">
+                    <h2>Technique Comparison Matrix</h2>
+                    <div class="comparison-table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Features</th>
+                                    <th>BRE-Lite</th>
+                                    <th>BRE-Lux</th>
+                                    <th>BRE-Ultra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Frame Construction</td>
+                                    <td>Powder Coated Aluminum</td>
+                                    <td>Reinforced Hybrid Frame</td>
+                                    <td>Full 304/316 Stainless Steel</td>
+                                </tr>
+                                <tr>
+                                    <td>Countertop Surface</td>
+                                    <td>304 Stainless Steel</td>
+                                    <td>12mm Sintered Stone</td>
+                                    <td>20mm Dekton/Luxury Stone</td>
+                                </tr>
+                                <tr>
+                                    <td>Standard Configuration</td>
+                                    <td>BBQ + Cabinet + Prep</td>
+                                    <td>BBQ + Sink + Fridge + Trash</td>
+                                    <td>Master Grill + Side Burner + Full Bar</td>
+                                </tr>
+                                <tr>
+                                    <td>Weather Rating</td>
+                                    <td>IP65 Waterproof</td>
+                                    <td>All-Weather Marine Grade</td>
+                                    <td>High-Temp & Arctic Rated</td>
+                                </tr>
+                                <tr>
+                                    <td>DIY Installation</td>
+                                    <td><span class="check-icon">High (2-3 hrs)</span></td>
+                                    <td><span class="check-icon">Medium (4-6 hrs)</span></td>
+                                    <td><span class="cross-icon">Professional Recommended</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Modular Expansion</td>
+                                    <td><span class="check-icon">Yes</span></td>
+                                    <td><span class="check-icon">Unlimited</span></td>
+                                    <td><span class="check-icon">Full Custom</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Tech Section -->
+    <section class="tech-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for the Elements</h2>
+                <p>Every Brealu kitchen is engineered with high-performance materials to ensure longevity in the most demanding outdoor environments.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Rust-Free Performance</h4>
+                    <p>Utilizing aircraft-grade aluminum and marine-grade stainless steel to prevent oxidation and corrosion.</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-cubes"></i></div>
+                    <h4>Lego-Logic Assembly</h4>
+                    <p>Modular units that snap together with precision, reducing setup time by up to 60% compared to traditional builds.</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><i class="fas fa-plug"></i></div>
+                    <h4>Hidden Utility Hub</h4>
+                    <p>Integrated channels for gas, electricity, and water, keeping your workspace clean and safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><img src="https://sc01.alicdn.com/kf/Haf3ab1463980456ab3ddf151c94971a6l.jpg" alt="Brealu"></div>
+                    <p>Premium manufacturer of architectural aluminum pergolas, kitchens, and outdoor solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="pergola-bre-r230.html">Retractable Pergola</a></li>
+                        <li><a href="pergola-bre-220.html">Heavy Duty Pergola</a></li>
+                        <li><a href="outdoor-kitchen-v1-alunotec.html">Cuisine Extérieure</a></li>
+                        <li><a href="#">Carport Series</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Projets</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>boaz@brealuoutdoor.com</li>
+                        <li>+86 17812581015</li>
+                        <li>Foshan, Guangdong, Chine</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Brealu Outdoor. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

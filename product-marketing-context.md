@@ -82,3 +82,8 @@
 ## Goals
 **Business goal:** Position Brealu as the premier global choice for "Professional DIY" pergolas in Europe and North America.
 **Conversion action:** Get My Free 24h Design Proposal.
+
+## Locked Files (DO NOT MODIFY)
+- `bre-r230.html`: Finalized version, pending deployment.
+- `pergola-v3-alunotec.html`: Finalized version, pending deployment.
+- `index.html`: Stable version, contains "Outdoor Living Insights", DO NOT MODIFY.

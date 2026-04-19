@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Brealu Outdoor - Premium Shading Systems</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --dark: #0F172A;
+            --light: #F1F5F9;
+            --gray: #64748B;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background: #fdfdfd; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Compact Header --- */
+        header { padding: 15px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 38px; }
+
+        /* --- Minimal Hero --- */
+        .page-header { padding: 60px 0 40px; text-align: center; border-bottom: 1px solid #f0f0f0; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        .page-header p { color: var(--gray); font-size: 1rem; }
+
+        /* --- Filter Bar --- */
+        .category-filter { padding: 25px 0; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .filter-chip { padding: 8px 20px; border-radius: 4px; border: 1px solid #ddd; background: white; cursor: pointer; transition: var(--transition); font-size: 0.9rem; color: #555; }
+        .filter-chip.active, .filter-chip:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* --- High Density Grid --- */
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 25px; 
+            padding: 40px 0 100px; 
+        }
+
+        .product-item { 
+            background: white; 
+            border: 1px solid #efefef; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            transition: var(--transition); 
+            position: relative;
+        }
+        .product-item:hover { 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            transform: translateY(-5px); 
+        }
+
+        /* Fixed 4:3 Aspect Ratio for Images */
+        .img-box { 
+            width: 100%; 
+            padding-top: 75%; /* 4:3 Ratio */
+            position: relative; 
+            overflow: hidden; 
+            background: #eee;
+        }
+        .img-box img { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+        .product-item:hover .img-box img { transform: scale(1.08); }
+
+        .item-info { padding: 20px; text-align: center; }
+        .item-info h3 { font-size: 1.15rem; margin-bottom: 8px; font-weight: 600; color: var(--dark); }
+        .item-info span { font-size: 0.8rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+
+        .view-btn { 
+            display: inline-block; 
+            margin-top: 15px; 
+            padding: 8px 25px; 
+            border: 1px solid var(--primary); 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            border-radius: 4px; 
+            transition: var(--transition);
+        }
+        .product-item:hover .view-btn { background: var(--primary); color: white; }
+
+        /* Badge */
+        .status-badge { position: absolute; top: 12px; right: 12px; z-index: 2; padding: 4px 10px; border-radius: 3px; font-size: 0.7rem; font-weight: 700; color: white; background: var(--secondary); }
+
+        /* Responsive */
+        @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .product-grid { grid-template-columns: 1fr; } }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        .nav-links .dropdown { top: 100% !important; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+        
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; }
+        @media (max-width: 1280px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+        }
+        
+    </style>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/pergola-v2-compact.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/pergola-v2-compact.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/pergola-v2-compact.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/pergola-v2-compact.html">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu"></div>
+            <div style="font-size: 0.85rem; font-weight: 600; color: var(--gray);">BREALU OUTDOOR | CATALOG 2026</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Product Collection</h1>
+                <p>Explore our full range of professional outdoor architectural systems.</p>
+            </div>
+        </section>
+
+        <div class="category-filter">
+            <button class="filter-chip active">All Products</button>
+            <button class="filter-chip">Pergola</button>
+            <button class="filter-chip">Awning</button>
+            <button class="filter-chip">Carport</button>
+            <button class="filter-chip">Zip Screen</button>
+            <button class="filter-chip">Shutter</button>
+        </div>
+
+        <section class="container">
+            <div class="product-grid">
+                
+                <!-- Product 1 -->
+                <article class="product-item">
+                    <span class="status-badge">TOP SELLER</span>
+                    <div class="img-box">
+                        <img src="https://sc01.alicdn.com/kf/He9002279154a43b2a0f8b1e4a4659b854.jpg" alt="R230">
+                    </div>
+                    <div class="item-info">
+                        <span>Bioclimatic System</span>
+                        <h3>BRE-R230 Flagship</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-item">
+                    <div class="img-box">
+                        <img src="https://sc01.alicdn.com/kf/H2b4c22acf58e4945855f581d7248dfd2s.jpg" alt="220">
+                    </div>
+                    <div class="item-info">
+                        <span>Heavy Duty</span>
+                        <h3>BRE-220 Custom</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-item">
+                    <div class="img-box">
+                        <img src="https://sc01.alicdn.com/kf/Ha2a0b1b55f8343fe978ab99430b94a5bg.jpg" alt="175U">
+                    </div>
+                    <div class="item-info">
+                        <span>Elite Performance</span>
+                        <h3>BRE-175U Elite</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-item">
+                    <span class="status-badge" style="background: #004A99;">READY TO SHIP</span>
+                    <div class="img-box">
+                        <img src="https://sc01.alicdn.com/kf/H4f07e6fcd9224fc99365cbc1a6958cbeU.jpg" alt="140U">
+                    </div>
+                    <div class="item-info">
+                        <span>DIY Friendly</span>
+                        <h3>BRE-140U Kit</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <!-- Placeholder for many more products -->
+                <article class="product-item">
+                    <div class="img-box"><img src="https://sc01.alicdn.com/kf/H98729571060e46a788e001859e0a037b5.jpg" alt="Zip Screen"></div>
+                    <div class="item-info">
+                        <span>Add-ons</span>
+                        <h3>Brealu Zip Screen</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <div class="img-box"><img src="https://sc01.alicdn.com/kf/H97368685101b4632870428589998670bx.jpg" alt="Carport"></div>
+                    <div class="item-info">
+                        <span>Carport</span>
+                        <h3>Brealu Carport L1</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <div class="img-box"><img src="https://sc01.alicdn.com/kf/H27786858102b4672870428589998670bx.jpg" alt="Awning"></div>
+                    <div class="item-info">
+                        <span>Awning</span>
+                        <h3>Cassette Awning C1</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <div class="img-box"><img src="https://sc01.alicdn.com/kf/H38478685103b4632870428589998670bx.jpg" alt="Shutter"></div>
+                    <div class="item-info">
+                        <span>Aluminum Shutter</span>
+                        <h3>Bi-folding Shutter S1</h3>
+                        <a href="#" class="view-btn">View More</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 40px 0; border-top: 1px solid #eee; text-align: center; color: var(--gray); font-size: 0.8rem;">
+        <p>&copy; 2026 Brealu Outdoor Group. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

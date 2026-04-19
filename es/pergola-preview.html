@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergola Series | Brealu Outdoor - Premium Aluminum Solutions</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --secondary: #00A651;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; background: var(--white); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+        /* --- Header --- */
+        header { padding: 20px 0; border-bottom: 1px solid #F1F5F9; position: sticky; top: 0; background: white; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 44px; }
+
+        /* --- Category Hero --- */
+        .category-hero { padding: 80px 0 60px; background: var(--light); text-align: center; }
+        .category-hero h1 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; font-weight: 700; }
+        .category-hero p { max-width: 700px; margin: 0 auto; color: var(--gray); font-size: 1.1rem; }
+
+        /* --- Filter Bar --- */
+        .filter-bar { padding: 30px 0; border-bottom: 1px solid #F1F5F9; display: flex; justify-content: center; gap: 20px; }
+        .filter-btn { padding: 10px 24px; border-radius: 50px; border: 1px solid #E2E8F0; background: white; cursor: pointer; transition: var(--transition); font-weight: 500; color: var(--gray); }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* --- Product Grid --- */
+        .product-grid { padding: 80px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        
+        .product-card { border-radius: 24px; overflow: hidden; background: white; border: 1px solid #F1F5F9; transition: var(--transition); display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        
+        .card-img { height: 400px; overflow: hidden; position: relative; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .product-card:hover .card-img img { transform: scale(1.05); }
+        
+        .badge { position: absolute; top: 20px; left: 20px; padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: white; }
+        .badge-primary { background: var(--primary); }
+        .badge-secondary { background: var(--secondary); }
+
+        .card-body { padding: 40px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-body h2 { font-size: 1.75rem; color: var(--primary); margin-bottom: 12px; }
+        .card-body p { color: var(--gray); font-size: 0.95rem; margin-bottom: 24px; }
+
+        .tech-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 30px; border-top: 1px solid #F1F5F9; padding-top: 24px; }
+        .tech-item { text-align: center; }
+        .tech-item i { display: block; font-size: 1.25rem; color: var(--primary); margin-bottom: 8px; }
+        .tech-item span { font-size: 0.75rem; color: var(--gray); display: block; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; }
+        .tech-item strong { font-size: 0.9rem; color: var(--dark); }
+
+        .card-footer { display: flex; gap: 15px; }
+        .btn { flex: 1; padding: 14px; text-align: center; border-radius: 12px; font-weight: 600; text-decoration: none; transition: var(--transition); font-size: 0.9rem; }
+        .btn-outline { border: 1px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        .btn-primary { background: var(--primary); color: white; border: 1px solid var(--primary); }
+        .btn-primary:hover { background: #003a7a; }
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .card-img { height: 300px; }
+        }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        .nav-links .dropdown { top: 100% !important; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+        
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; }
+        @media (max-width: 1280px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+        }
+        
+    </style>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/pergola-preview.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/pergola-preview.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/pergola-preview.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/pergola-preview.html">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo">
+            </div>
+            <div style="color: var(--gray); font-weight: 500;">DTC Professional Series</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="category-hero">
+            <div class="container">
+                <h1>Aluminum Pergola Series</h1>
+                <p>From flagship retractable systems to fast-shippable DIY kits, explore our precision-engineered bioclimatic solutions designed for every outdoor space.</p>
+            </div>
+        </section>
+
+        <div class="filter-bar">
+            <button class="filter-btn active">All Systems</button>
+            <button class="filter-btn">Retractable</button>
+            <button class="filter-btn">Louvered</button>
+            <button class="filter-btn">DIY Friendly</button>
+        </div>
+
+        <section class="container">
+            <div class="product-grid">
+                
+                <!-- Product 1: BRE-R230 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge badge-primary">Flagship Retractable</span>
+                        <img src="https://sc01.alicdn.com/kf/He9002279154a43b2a0f8b1e4a4659b854.jpg" alt="BRE-R230">
+                    </div>
+                    <div class="card-body">
+                        <h2>BRE-R230</h2>
+                        <p>The ultimate retractable bioclimatic system. Experience 100% sky openness or full waterproof protection with 135?rotating blades.</p>
+                        
+                        <div class="tech-summary">
+                            <div class="tech-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>Luz M﹛ima</span>
+                                <strong>4.0m x 7.0m</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-wind"></i>
+                                <span>Wind Load</span>
+                                <strong>220 km/h</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Operation</span>
+                                <strong>Full Smart</strong>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">Technical Specs</a>
+                            <a href="#" class="btn btn-primary">Get a Quote</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2: BRE-220 -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge badge-secondary">Heavy Duty</span>
+                        <img src="https://sc01.alicdn.com/kf/H2b4c22acf58e4945855f581d7248dfd2s.jpg" alt="BRE-220">
+                    </div>
+                    <div class="card-body">
+                        <h2>BRE-220</h2>
+                        <p>Engineered for massive custom spans and extreme snow accumulation. The professional choice for severe commercial environments.</p>
+                        
+                        <div class="tech-summary">
+                            <div class="tech-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Carga de Nieve</span>
+                                <strong>100 cm</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-pencil-ruler"></i>
+                                <span>Design</span>
+                                <strong>Full Custom</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>LED System</span>
+                                <strong>Dual-Zone</strong>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">Technical Specs</a>
+                            <a href="#" class="btn btn-primary">Get a Quote</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3: BRE-175U -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge badge-primary">Elite Performance</span>
+                        <img src="https://sc01.alicdn.com/kf/Ha2a0b1b55f8343fe978ab99430b94a5bg.jpg" alt="BRE-175U">
+                    </div>
+                    <div class="card-body">
+                        <h2>BRE-175U</h2>
+                        <p>The perfect balance of strength and cost-effectiveness. A highly customizable system optimized for premium residential villas.</p>
+                        
+                        <div class="tech-summary">
+                            <div class="tech-item">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>Luz M﹛ima</span>
+                                <strong>4.0m x 6.0m</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Durability</span>
+                                <strong>6063-T5 Alum</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-drafting-compass"></i>
+                                <span>Custom</span>
+                                <strong>24h Design</strong>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">Technical Specs</a>
+                            <a href="#" class="btn btn-primary">Get a Quote</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4: BRE-140U -->
+                <article class="product-card">
+                    <div class="card-img">
+                        <span class="badge badge-secondary">Ready to Ship</span>
+                        <img src="https://sc01.alicdn.com/kf/H4f07e6fcd9224fc99365cbc1a6958cbeU.jpg" alt="BRE-140U">
+                    </div>
+                    <div class="card-body">
+                        <h2>BRE-140U</h2>
+                        <p>Our best-selling DIY kit. Modular connection design optimized for fast 1-day Instalaci and rapid global Env.</p>
+                        
+                        <div class="tech-summary">
+                            <div class="tech-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Montaje</span>
+                                <strong>1 Day DIY</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-Env-fast"></i>
+                                <span>Logistics</span>
+                                <strong>Standard Stock</strong>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-check-double"></i>
+                                <span>Quality</span>
+                                <strong>TUV Certified</strong>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline">Technical Specs</a>
+                            <a href="#" class="btn btn-primary">Get a Quote</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; background: var(--dark); color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 Brealu Outdoor. Professional Bioclimatic Systems.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

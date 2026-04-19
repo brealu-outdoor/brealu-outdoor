@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/index-v2.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/index-v2.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/index-v2.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/index-v2.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brealu | Premium DIY Pergola Kits & Custom Outdoor Solutions</title>
@@ -1033,7 +1037,7 @@
             position: relative;
         }
         .process-step:not(:last-child)::after {
-            content: "→";
+            content: "?;
             position: absolute;
             right: -15px;
             top: 30%;
@@ -1131,6 +1135,27 @@
             .hero-content h1 { font-size: 3.5rem; }
             .section { padding: 80px 0; }
         }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+    
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; }
+        @media (max-width: 1200px) {
+            .nav-links { gap: 10px !important; }
+            .nav-links a { font-size: 0.8rem !important; }
+        }
+    
     </style>
 </head>
 <body>
@@ -1201,6 +1226,16 @@
                 <div class="nav-item"><a href="#">News</a></div>
                 <div class="nav-item"><a href="#reviews">Reviews</a></div>
                 <div class="nav-item"><a href="#">Contact Us</a></div>
+            
+                <div class="nav-item lang-switcher">
+                    <a href="#" class="lang-btn"><i class="fas fa-globe"></i> EN <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:4px;"></i></a>
+                    <div class="dropdown">
+                        <a href="index.html">English</a>
+                        <a href="fr/index.html">Français</a>
+                        <a href="de/index.html">Deutsch</a>
+                        <a href="es/index.html">Español</a>
+                    </div>
+                </div>
             </nav>
             <a href="#inquiry" class="btn btn-primary" style="padding: 10px 24px;">Start Design</a>
         </div>
@@ -1223,7 +1258,7 @@
 
         <div class="container" style="position: relative; display: flex; align-items: center; justify-content: space-between;">
             <div class="hero-content">
-                <h1>Breathe · Relax · Embrace</h1>
+                <h1>Breathe · Relax · Embrace./h1>
                 <p>Global leader in premium <strong>DIY Pergola Kits</strong> and architectural shading. Engineering excellence delivered to Europe, North America, Oceania, and the Middle East.</p>
                 <div style="display:flex; gap:20px;">
                     <a href="#inquiry" class="btn btn-primary">Get Free 3D Design</a>
@@ -1268,8 +1303,8 @@
                                 <div class="spec-list">
                                     <div class="spec-item"><span class="spec-label">Price Range</span><span class="spec-value" style="color:var(--primary);">$$$$$+</span></div>
                                     <div class="spec-item"><span class="spec-label">Max Size (4 Posts)</span><span class="spec-value">4m x 7m</span></div>
-                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">180–220 km/h</span></div>
-                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">70–80cm</span></div>
+                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">180?20 km/h</span></div>
+                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">70?0cm</span></div>
                                     <div class="spec-item"><span class="spec-label">LED Lighting</span><div class="spec-value">Blade <i class="fas fa-times status-cross"></i> Gutter <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Installation</span><div class="spec-value">Wall-Mounted <i class="fas fa-check status-check"></i> Freestanding <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Customization</span><div class="spec-value">Shape <i class="fas fa-check status-check"></i> Size <i class="fas fa-check status-check"></i> Color <i class="fas fa-check status-check"></i></div></div>
@@ -1300,8 +1335,8 @@
                                 <div class="spec-list">
                                     <div class="spec-item"><span class="spec-label">Price Range</span><span class="spec-value" style="color:var(--primary);">$$$$$</span></div>
                                     <div class="spec-item"><span class="spec-label">Max Size (4 Posts)</span><span class="spec-value">4.5m x 6m</span></div>
-                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">180–220 km/h</span></div>
-                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">80–100cm</span></div>
+                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">180?20 km/h</span></div>
+                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">80?00cm</span></div>
                                     <div class="spec-item"><span class="spec-label">LED Lighting</span><div class="spec-value">Blade <i class="fas fa-check status-check"></i> Gutter <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Installation</span><div class="spec-value">Wall-Mounted <i class="fas fa-check status-check"></i> Freestanding <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Customization</span><div class="spec-value">Shape <i class="fas fa-check status-check"></i> Size <i class="fas fa-check status-check"></i> Color <i class="fas fa-check status-check"></i></div></div>
@@ -1332,8 +1367,8 @@
                                 <div class="spec-list">
                                     <div class="spec-item"><span class="spec-label">Price Range</span><span class="spec-value" style="color:var(--primary);">$$$$</span></div>
                                     <div class="spec-item"><span class="spec-label">Max Size (4 Posts)</span><span class="spec-value">4m x 6m</span></div>
-                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">170–190 km/h</span></div>
-                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">60–80cm</span></div>
+                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">170?90 km/h</span></div>
+                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">60?0cm</span></div>
                                     <div class="spec-item"><span class="spec-label">LED Lighting</span><div class="spec-value">Blade <i class="fas fa-check status-check"></i> Gutter <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Installation</span><div class="spec-value">Wall-Mounted <i class="fas fa-check status-check"></i> Freestanding <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Customization</span><div class="spec-value">Shape <i class="fas fa-times status-cross"></i> Size <i class="fas fa-check status-check"></i> Color <i class="fas fa-check status-check"></i></div></div>
@@ -1364,8 +1399,8 @@
                                 <div class="spec-list">
                                     <div class="spec-item"><span class="spec-label">Price Range</span><span class="spec-value" style="color:var(--primary);">$$$</span></div>
                                     <div class="spec-item"><span class="spec-label">Max Size (4 Posts)</span><span class="spec-value">4m x 5m</span></div>
-                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">170–190 km/h</span></div>
-                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">50–60cm</span></div>
+                                    <div class="spec-item"><span class="spec-label">Wind Resistance</span><span class="spec-value">170?90 km/h</span></div>
+                                    <div class="spec-item"><span class="spec-label">Snow Load</span><span class="spec-value">50?0cm</span></div>
                                     <div class="spec-item"><span class="spec-label">LED Lighting</span><div class="spec-value">Blade <i class="fas fa-times status-cross"></i> Gutter <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Installation</span><div class="spec-value">Wall-Mounted <i class="fas fa-times status-cross"></i> Freestanding <i class="fas fa-check status-check"></i></div></div>
                                     <div class="spec-item"><span class="spec-label">Customization</span><div class="spec-value">Frame Shape <i class="fas fa-times status-cross"></i> Size <i class="fas fa-check status-check"></i> Color <i class="fas fa-check status-check"></i></div></div>
@@ -1530,7 +1565,7 @@
                     <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <h3 style="font-size: 1.8rem; margin-bottom: 20px;">"The Florida Standard: Hurricane-Proof Engineering"</h3>
                     <div class="testimonial-text">
-                        "I and my wife visiting their showroom in China was a game-changer. We saw real samples, tested the structure, and realized this is exactly what Florida villa projects need – hurricane-proof, rust-proof, and easy to install. Boaz listened to our concerns and made several design adjustments based on our site conditions. Their team responds within hours, not days. We've already placed bulk orders for multiple villas. Highly recommend for any serious developer."
+                        "I and my wife visiting their showroom in China was a game-changer. We saw real samples, tested the structure, and realized this is exactly what Florida villa projects need ?hurricane-proof, rust-proof, and easy to install. Boaz listened to our concerns and made several design adjustments based on our site conditions. Their team responds within hours, not days. We've already placed bulk orders for multiple villas. Highly recommend for any serious developer."
                     </div>
                     <div class="customer-info">
                         <div class="customer-avatar">DW</div>
@@ -1553,7 +1588,7 @@
                     <div class="case-content">
                         <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <div class="testimonial-text">
-                            "I flew to China to visit their factory – and I was blown away. The scale of production and the professional team left a strong impression. Boaz and his team showed us everything from raw material to finished pergolas. We immediately signed a B2B partnership. If you’re a serious buyer, visit their factory – you’ll understand why we trust them."
+                            "I flew to China to visit their factory ?and I was blown away. The scale of production and the professional team left a strong impression. Boaz and his team showed us everything from raw material to finished pergolas. We immediately signed a B2B partnership. If youe a serious buyer, visit their factory ?youl understand why we trust them."
                         </div>
                         <div class="customer-info">
                             <div class="customer-avatar">JH</div>
@@ -1574,7 +1609,7 @@
                     <div class="case-content">
                         <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <div class="testimonial-text">
-                            "Great experience from start to finish. The team sent accurate CAD drawings in just 1 day. The pergola is lightweight yet extremely strong – perfect for our snowy winters."
+                            "Great experience from start to finish. The team sent accurate CAD drawings in just 1 day. The pergola is lightweight yet extremely strong ?perfect for our snowy winters."
                         </div>
                         <div class="customer-info">
                             <div class="customer-avatar">RL</div>
@@ -1595,7 +1630,7 @@
                     <div class="case-content">
                         <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         <div class="testimonial-text">
-                            "Best supplier we’ve worked with. The structure feels like it will last 20 years. Installation was so intuitive that we didn’t even need a pro. Boaz is patient and responsive."
+                            "Best supplier wee worked with. The structure feels like it will last 20 years. Installation was so intuitive that we didn even need a pro. Boaz is patient and responsive."
                         </div>
                         <div class="customer-info">
                             <div class="customer-avatar">MK</div>
@@ -1619,7 +1654,7 @@
                 <p>From aerospace-grade aluminum to smart sensors, every Brealu system is manufactured under clinical precision and rigorous international standards.</p>
             </div>
             
-            <!-- 5步流程图 -->
+            <!-- 5ユ -->
             <div class="process-grid">
                 <div class="process-step">
                     <div class="process-icon"><i class="fas fa-pencil-ruler"></i></div>
@@ -1648,7 +1683,7 @@
                 </div>
             </div>
 
-            <!-- 工厂与设备实拍展示 -->
+            <!-- ュ?-->
             <div class="feature-grid" style="margin-top: 80px;">
                 <div class="news-card">
                     <div class="news-img" style="background-image: url('https://sc02.alicdn.com/kf/Aa5e9696a07354517affc0cd6e5ac5b983.png'); height: 300px;"></div>
@@ -1704,7 +1739,7 @@
                             <span class="news-tag">Residential</span>
                             <h3>European Villa Transformation</h3>
                             <p>Bespoke BRE-220 installation in Vienna, Austria, providing year-round garden comfort.</p>
-                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">View Project Details →</a>
+                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">View Project Details ?/a>
                         </div>
                     </div>
                 </div>
@@ -1716,7 +1751,7 @@
                             <span class="news-tag">Engineering</span>
                             <h3>Extreme Snow Load: Toronto Project</h3>
                             <p>Engineering a heavy-duty solution for Canada's harshest winters with reinforced aluminum.</p>
-                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">View Technical Details →</a>
+                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">View Technical Details ?/a>
                         </div>
                     </div>
                 </div>
@@ -1728,7 +1763,7 @@
                             <span class="news-tag">Modern Living</span>
                             <h3>Smart L-Shape Sanctuary</h3>
                             <p>Integration of RGB lighting and wind sensors for a fully automated outdoor room experience.</p>
-                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">Explore the Design →</a>
+                            <a href="#" style="color:var(--primary); font-weight:700; display:block; margin-top:16px;">Explore the Design ?/a>
                         </div>
                     </div>
                 </div>
@@ -1744,14 +1779,14 @@
                     <h2 style="color:white; font-size:3.5rem; margin-bottom:24px;">Transform Your Space Today.</h2>
                     <p style="color:rgba(255,255,255,0.8); font-size:1.25rem; margin-bottom:48px;">Join thousands of satisfied owners across Europe, North America, Oceania, and the Middle East. Get your <strong>DIY-ready 3D design</strong> and quote within 24 hours.</p>
                     <ul class="step-list">
-                        <li class="step-item" style="margin-bottom:20px; color: white;">✓ DIY-Friendly Design Consultation</li>
-                        <li class="step-item" style="margin-bottom:20px; color: white;">✓ Engineering Plans for Global Compliance</li>
-                        <li class="step-item" style="color: white;">✓ Reliable Door-to-Door Delivery in 150+ Countries</li>
+                        <li class="step-item" style="margin-bottom:20px; color: white;">?DIY-Friendly Design Consultation</li>
+                        <li class="step-item" style="margin-bottom:20px; color: white;">?Engineering Plans for Global Compliance</li>
+                        <li class="step-item" style="color: white;">?Reliable Door-to-Door Delivery in 150+ Countries</li>
                     </ul>
                 </div>
                 <div class="form-card">
                     <h3 style="margin-bottom:32px;">Project Inquiry Form</h3>
-                    <form action="#">
+                    <form action="thank-you.html">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input type="text" class="form-control" placeholder="John Doe">

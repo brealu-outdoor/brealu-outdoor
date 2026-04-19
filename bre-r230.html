@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/bre-r230.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/bre-r230.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/bre-r230.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/bre-r230.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRE-R230 | The Architectural Flagship Pergola | Brealu Outdoor</title>
@@ -172,6 +176,27 @@
             .led-content { padding-left: 20px; }
             .f-grid { grid-template-columns: 1fr 1fr; }
         }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+    
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; }
+        @media (max-width: 1200px) {
+            .nav-links { gap: 10px !important; }
+            .nav-links a { font-size: 0.8rem !important; }
+        }
+    
     </style>
 </head>
 <body>
@@ -183,15 +208,33 @@
             </div>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="pergola-v3-alunotec.html" class="active">Products</a>
-                <a href="#engineering">Engineering</a>
-                <a href="#contact">Contact</a>
+                <a href="pergola-v3-alunotec.html" class="active">Pergola</a>
+                <a href="outdoor-kitchen-v3-alunotec.html">Kitchen</a>
+                <a href="projects.html">Projects</a>
+                <a href="pergola-comparison.html">Comparison</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact Us</a>
+            
+                <div class="nav-item lang-switcher">
+                    <a href="#" class="lang-btn"><i class="fas fa-globe"></i> EN <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:4px;"></i></a>
+                    <div class="dropdown">
+                        <a href="index.html">English</a>
+                        <a href="fr/index.html">Français</a>
+                        <a href="de/index.html">Deutsch</a>
+                        <a href="es/index.html">Español</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
     <!-- PDP Main Content -->
     <main class="container pdp-main-section" style="margin-top: 130px;">
+        <div class="breadcrumb" style="font-size: 0.85rem; color: #666; margin-bottom: 25px; font-weight: 600;">
+            <a href="index.html" style="color: inherit; text-decoration: none;">Home</a><span style="margin: 0 10px; opacity: 0.5;">/</span>
+            <a href="pergola-v3-alunotec.html" style="color: inherit; text-decoration: none;">Pergola</a><span style="margin: 0 10px; opacity: 0.5;">/</span>
+            <span>BRE-R230 Flagship</span>
+        </div>
         <div class="pdp-grid">
             <!-- Left: Gallery -->
             <div class="gallery-container">
@@ -202,348 +245,240 @@
                     <div class="thumb-item active"><img src="https://sc01.alicdn.com/kf/H6c55138b84c548709adee9c1a4e8f4fdk.jpg" alt="Gallery 1"></div>
                     <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/Hdcf3e0fa4d1b43689e65f321fb548942b.jpg" alt="Gallery 2"></div>
                     <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H4db22b020dfa4095a5525d3d9f8d609eD.jpg" alt="Gallery 3"></div>
-                    <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H3af18eaca8b345959d78ef93331b9ee3k.jpg" alt="Gallery 4"></div>
-                    <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H6c55138b84c548709adee9c1a4e8f4fdk.jpg" alt="Gallery 5"></div>
-                    <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H9d0cfead78524c13b66e8a9a6933b90cE.jpg" alt="Gallery 6"></div>
                 </div>
-                
                 <div class="share-row">
-                    <span>Share to:</span>
+                    <span>Share:</span>
                     <div class="share-icons">
-                        <a href="#" style="background: #3b5998;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" style="background: #000000;"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" style="background: #00c300;"><i class="fab fa-line"></i></a>
-                        <a href="#" style="background: #25d366;"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" style="background: #0077b5;"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" style="background: #bd081c;"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" style="background:#3b5998;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="background:#1da1f2;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="background:#0077b5;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="background:#e60023;"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Info Panel -->
+            <!-- Right: Info -->
             <div class="info-panel">
                 <div class="p-title-area">
-                    <h1>Brealu New BRE-R230 Custom Motorized Panoramic Sky Opening Retractable Louver Pergola <i class="fas fa-qrcode" style="font-size: 1.2rem; color: #666; cursor: pointer; margin-left: 10px;"></i></h1>
-                    <p class="p-desc">BRE-R230 is a professional motorized retractable louvered pergola with a 75% sky-opening system. The louvers slide and stack to create a panoramic open-sky experience, switching instantly between shade, ventilation, and full sunlight—ideal for extreme weather and high-end outdoor living.</p>
+                    <h1>Brealu New BRE-R230 Custom Motorized Panoramic Sky Opening Retractable Louver Pergola</h1>
                 </div>
+                
+                <p class="p-desc">The ultimate architectural masterpiece. Featuring a 75% retractable louver system, the BRE-R230 provides unparalleled control over light, airflow, and sky visibility. Engineered for the most demanding luxury projects.</p>
 
                 <div class="selector-group">
-                    <div class="selector-label">Material:</div>
+                    <div class="selector-label">Color</div>
                     <div class="selector-options">
-                        <div class="option-card active">Aluminum 6063 T5</div>
+                        <div class="option-card active">Anthracite Grey</div>
+                        <div class="option-card">Pure White</div>
+                        <div class="option-card">Bronze</div>
                     </div>
                 </div>
 
                 <div class="selector-group">
-                    <div class="selector-label">Size:</div>
+                    <div class="selector-label">Size (m)</div>
                     <div class="selector-options">
-                        <div class="option-card active">4x7m (4 posts)</div>
-                        <div class="option-card">Customised</div>
+                        <div class="option-card active">4 x 7</div>
+                        <div class="option-card">3 x 5</div>
+                        <div class="option-card">Custom</div>
                     </div>
                 </div>
 
-                <div class="selector-group">
-                    <div class="selector-label">Quantity:</div>
-                    <div class="selector-options">
-                        <div class="qty-box">
-                            <button class="qty-btn">-</button>
-                            <input type="text" value="1" class="qty-input">
-                            <button class="qty-btn">+</button>
-                        </div>
-                    </div>
+                <div style="margin-top:40px; border-top: 1px solid #eee; padding-top:30px;">
+                    <a href="contact.html" class="btn-inquire-now">Get Exclusive Quote</a>
                 </div>
-
-                <a href="#contact" class="btn-inquire-now">Inquire</a>
             </div>
         </div>
     </main>
 
-    <!-- Sub-Nav -->
-    <div class="pdp-nav">
-        <a href="#overview">Overview</a>
+    <!-- Sub Navigation -->
+    <nav class="pdp-nav">
         <a href="#engineering">Engineering</a>
         <a href="#performance">Performance</a>
-        <a href="#smart">Smart Control</a>
-        <a href="#specs">Specifications</a>
+        <a href="#smart">Smart Features</a>
+        <a href="#specs">Technical Specs</a>
         <a href="#faq">FAQ</a>
-    </div>
+    </nav>
 
-    <!-- Overview: Grand Scale -->
-    <section id="overview" class="section-padding">
+    <!-- Section: Engineering (Architecture & Scale) -->
+    <section id="engineering" class="section-padding">
         <div class="container">
             <div class="scale-grid">
-                <div class="scale-visual">
-                    <!-- Lifestyle View with Markers -->
-                    <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.15);">
-                        <img src="https://sc01.alicdn.com/kf/H6c4e1fe2d2d04dd8825f1173aa5fe3bbl.jpg" alt="4x7m Scale" style="width:100%; display:block;">
-                        <div class="scale-overlay">
-                            <!-- Width Marker (Long side) -->
-                            <div style="position: absolute; top: 11%; left: 50%; transform: translateX(-50%); width: 240px;">
-                                <div style="width: 100%; height: 1.5px; background: var(--primary); position: relative;">
-                                    <div style="position: absolute; left: 0; top: -4px; width: 1.5px; height: 10px; background: var(--primary);"></div>
-                                    <div style="position: absolute; right: 0; top: -4px; width: 1.5px; height: 10px; background: var(--primary);"></div>
-                                    <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 2px 10px; border-radius: 2px; font-weight: 800; font-size: 0.65rem; white-space: nowrap; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">MAX 7M WIDTH</div>
-                                </div>
-                            </div>
-                             <!-- Depth Marker (Right Beam - Strictly Aligned to Segment) -->
-                             <div style="position: absolute; top: 20%; right: 12%; transform: rotate(-33deg); width: 100px; transform-origin: right center;">
-                                 <div style="width: 100%; height: 1.5px; background: var(--primary); position: relative;">
-                                     <div style="position: absolute; left: 0; top: -4px; width: 1.5px; height: 10px; background: var(--primary);"></div>
-                                     <div style="position: absolute; right: 0; top: -4px; width: 1.5px; height: 10px; background: var(--primary);"></div>
-                                     <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 2px 10px; border-radius: 2px; font-weight: 800; font-size: 0.65rem; white-space: nowrap; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">MAX 4M DEPTH</div>
-                                 </div>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 30px;">Architecture Without Limits</h2>
-                    <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: 40px;">The R230 pushes the boundaries of aluminum structural engineering. By utilizing an high-tensile 6063-T5 alloy frame, we achieve a massive **4m x 7m single-module span** using only 4 columns—providing an unobstructed panoramic view that standard pergolas simply cannot match.</p>
-                    <ul style="list-style: none; font-weight: 700; color: var(--dark);">
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 15px;"></i> Zero Mid-Beams Required</li>
-                        <li style="margin-bottom: 15px;"><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 15px;"></i> Full Motorized Retraction</li>
-                        <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 15px;"></i> Seamless Modular Expansion</li>
+                <div class="scale-content">
+                    <h2 style="font-size:3.5rem; margin-bottom:30px;">Architecture <br><strong>& Scale.</strong></h2>
+                    <p style="font-size:1.1rem; color:var(--gray-600); margin-bottom:40px;">The R230 is defined by its massive scale and precision alignment. Every module is a feat of structural engineering, allowing for single spans of up to 7 meters without compromising the fluidity of the retractable mechanism.</p>
+                    <ul style="list-style:none;">
+                        <li style="margin-bottom:20px; display:flex; gap:15px; font-weight:600;"><i class="fas fa-check-circle" style="color:var(--secondary); margin-top:5px;"></i> 230mm Aerofoil Louver Profile</li>
+                        <li style="margin-bottom:20px; display:flex; gap:15px; font-weight:600;"><i class="fas fa-check-circle" style="color:var(--secondary); margin-top:5px;"></i> Dual-Motor Synchronized Drive</li>
+                        <li style="margin-bottom:20px; display:flex; gap:15px; font-weight:600;"><i class="fas fa-check-circle" style="color:var(--secondary); margin-top:5px;"></i> 75% Total Retraction Clearance</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Engineering: The Mega Post -->
-    <section id="engineering" class="section-padding bg-light">
-        <div class="container">
-            <div class="mega-post">
-                <div class="post-img-box">
-                    <img src="https://sc02.alicdn.com/kf/A01381d4603454bab9413bae13a4d986bj.png" alt="Mega Post Aluminum Texture" style="width:100%; display:block;">
-                    <!-- Metallic Texture Highlight Overlay -->
-                    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,74,153,0.9); color: white; padding: 15px 25px; border-radius: 4px; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                        <div style="font-size: 0.7rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; opacity: 0.8;">Surface Finish</div>
-                        <div style="font-size: 1.1rem; font-weight: 700;">AkzoNobel Powder Coating</div>
-                        <div style="font-size: 0.85rem; margin-top: 5px; opacity: 0.9;">Anti-Corrosion & UV Resistant</div>
-                    </div>
-                    <!-- Thickness Indicator -->
-                    <div style="position: absolute; top: 30%; left: 30%; width: 120px; height: 120px; border: 2px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
-                        <div style="text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 900; color: var(--primary);">3.0mm</div>
-                            <div style="font-size: 0.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase;">Heavy Wall</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Industrial Mastery</span>
-                    <h2>The 200mm Heavy-Duty Core</h2>
-                    <p style="font-size: 1.25rem; opacity: 0.8; margin-bottom: 40px;">Precision is visible in every micron. Our 200mm posts are forged from high-tensile aluminum and finished with professional AkzoNobel coating for a premium metallic texture that lasts a lifetime.</p>
-                    <div class="post-specs">
-                        <div class="ps-item">
-                            <strong>200<sup>mm</sup></strong>
-                            <span>Profile Width</span>
-                        </div>
-                        <div class="ps-item">
-                            <strong>3.0<sup>mm</sup></strong>
-                            <span>Wall Thickness</span>
-                        </div>
-                        <div class="ps-item">
-                            <strong>6063-T5</strong>
-                            <span>Aviation Grade</span>
-                        </div>
+                <div class="scale-visual">
+                    <img src="https://sc01.alicdn.com/kf/H6c55138b84c548709adee9c1a4e8f4fdk.jpg" alt="R230 Scale Diagram">
+                    <div class="scale-overlay">
+                        <div class="dim-line" style="top:10%; left:50%; transform:translateX(-50%);">MAX SPAN 7000mm</div>
+                        <div class="dim-line" style="top:50%; right:-20px; transform:rotate(90deg);">HEIGHT 3000mm</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Innovation: The Retractable System -->
-    <section class="section-padding" style="background: var(--dark); color: white; overflow: hidden;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-                <div>
-                    <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Retraction Tech</span>
-                    <h2 style="color: white; font-size: 3.5rem; margin-bottom: 30px; line-height: 1.1;">Sky-Opening Innovation</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px;">Unlike standard louvered roofs, the R230 features a revolutionary sliding mechanism. With a single touch, the louvers slide and stack, revealing an unobstructed view of the sky—the ultimate biophilic experience.</p>
-                </div>
-                <div style="position: relative;">
-                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="https://sc02.alicdn.com/kf/A1f342f5adfb447b6b010e3b1f9808eb0q.png" alt="Retractable Mechanism" style="width:100%; display:block;">
-                    </div>
-                    <!-- 75% Sky Exposure Badge -->
-                    <div style="position: absolute; top: 15%; right: -30px; background: var(--primary); color: white; padding: 20px 30px; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); text-align: center; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                        <div style="font-size: 2.5rem; font-weight: 900; line-height: 1; font-family: 'Outfit';">75%</div>
-                        <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Sky Exposure</div>
-                    </div>
-                    <!-- Detail callout -->
-                    <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6); color: white; padding: 8px 15px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1);">
-                        <i class="fas fa-microchip"></i> PRECISION SLIDING TRACK
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Performance: Hurricane -->
-    <section id="performance" class="section-padding">
+    <!-- Section: Performance (Hurricane Eye) -->
+    <section id="performance" class="section-padding bg-dark">
         <div class="container">
             <div class="hurricane-wrap">
                 <div class="hurricane-stats">
                     <div class="stat-item">
-                        <div class="lbl">Wind Resistance</div>
                         <div class="val">220</div>
-                        <div class="lbl">KM / H</div>
+                        <div class="lbl">KM/H WIND RATING</div>
                     </div>
                     <div class="stat-item">
-                        <div class="lbl">Snow Load</div>
                         <div class="val">80</div>
-                        <div class="lbl">CM DEPTH</div>
+                        <div class="lbl">CM SNOW CAPACITY</div>
                     </div>
                 </div>
                 <div class="hurricane-text">
-                    <h2 style="font-size: 4rem;">Hurricane Engineered</h2>
-                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px;">The R230 Bioclimatic System is tested to the limits. Designed to withstand the most extreme weather events on the planet, from Florida’s hurricane-force winds to the heavy snowfalls of the Alps. The aerodynamic louvers and reinforced locking points ensure the structure remains a safe haven in any storm.</p>
-                    <div class="led-pill" style="border-color: rgba(255,255,255,0.5); width: fit-content; color: white;">
-                        <i class="fas fa-shield-virus"></i> TUV & CE Certified Structural Load Testing
-                    </div>
+                    <h2>Engineered for the <strong>Extreme.</strong></h2>
+                    <p style="font-size:1.2rem; color:rgba(255,255,255,0.7); line-height:1.8;">The R230 isn't just a shading system; it's a structural barrier. Built with 6063-T6 architectural grade aluminum, it maintains absolute rigidity during peak hurricane force winds and heavy winter snow loads.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Smart: LED & Control -->
+    <!-- Section: Smart Features (LED) -->
     <section id="smart" class="led-section">
-        <img src="https://sc01.alicdn.com/kf/H3af18eaca8b345959d78ef93331b9ee3k.jpg" class="led-bg" alt="LED Night">
+        <img src="https://sc01.alicdn.com/kf/Hdcf3e0fa4d1b43689e65f321fb548942b.jpg" class="led-bg" alt="LED Night View">
         <div class="led-gradient"></div>
-        <div class="container led-content">
-            <span style="color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Illumination</span>
-            <h2>Atmosphere. <br>Defined.</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9;">The R230 features an advanced integrated perimeter lighting system. High-intensity Gutter LEDs are seamlessly built into the structure, providing elegant and functional illumination that defines your outdoor space at night.</p>
+        <div class="led-content">
+            <h2>Atmosphere <br><strong>by Design.</strong></h2>
+            <p style="font-size:1.1rem; opacity:0.8;">Integrated Gutter-LED and Louver-Spot lighting systems create an immersive environment. Fully dimmable via smartphone app or home automation integration.</p>
             <div class="led-pill-grid">
-                <div class="led-pill"><i class="fas fa-sun"></i> 3000K Warm White</div>
-                <div class="led-pill"><i class="fas fa-sliders-h"></i> 0-100% Dimming</div>
-                <div class="led-pill"><i class="fas fa-tint-slash"></i> IP67 Waterproof Wiring</div>
-                <div class="led-pill"><i class="fas fa-bolt"></i> Low Voltage Efficiency</div>
+                <div class="led-pill"><i class="fas fa-lightbulb"></i> Warm White 3000K</div>
+                <div class="led-pill"><i class="fas fa-palette"></i> RGB Scenic Control</div>
+                <div class="led-pill"><i class="fas fa-sliders"></i> 0-100% Dimming</div>
+                <div class="led-pill"><i class="fas fa-wifi"></i> Zigbee / Tuya / KNX</div>
             </div>
         </div>
     </section>
 
-    <!-- App Control -->
-    <section class="container">
-        <div class="app-section">
-            <div class="app-text">
-                <h2 style="font-size: 3rem; margin-bottom: 25px;">Your Outdoor Space, <br>In Your Pocket.</h2>
-                <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 40px;">Full automation at your fingertips. Control louver angles, lighting intensity, and integrated zip screens via our dedicated Smart Life app. Compatible with Amazon Alexa and Google Home for seamless voice commands.</p>
-                <div style="display: flex; gap: 20px;">
-                    <i class="fab fa-apple" style="font-size: 2rem; color: var(--dark);"></i>
-                    <i class="fab fa-android" style="font-size: 2rem; color: var(--dark);"></i>
-                    <i class="fab fa-amazon" style="font-size: 2rem; color: var(--dark);"></i>
-                    <i class="fab fa-google" style="font-size: 2rem; color: var(--dark);"></i>
-                </div>
-            </div>
-            <div class="app-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <i class="fas fa-power-off" style="font-size: 3rem; margin-bottom: 20px; color: var(--primary);"></i>
-                        <h3>Brealu Home</h3>
-                        <div style="margin-top: 40px; text-align: left;">
-                            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                <div style="font-size: 0.7rem; opacity: 0.6;">ROOF ANGLE</div>
-                                <div style="font-weight: 700;">85° (Retracted)</div>
-                            </div>
-                            <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px;">
-                                <div style="font-size: 0.7rem; opacity: 0.6;">LIGHTING</div>
-                                <div style="font-weight: 700;">Warm Glow - 40%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specs: Grid -->
+    <!-- Section: Technical Specs -->
     <section id="specs" class="section-padding bg-light">
         <div class="container">
-            <div class="text-center" style="margin-bottom: 80px;">
-                <h2 style="font-size: 3rem;">Technical DNA</h2>
-                <p>Every component is engineered to military-grade tolerances.</p>
+            <div class="text-center" style="margin-bottom:80px;">
+                <h2 style="font-size:3rem;">Technical <strong>Specifications.</strong></h2>
             </div>
             <div class="specs-grid">
-                <div class="spec-cell"><h4>Alloy Grade</h4><p>6063-T5 High Tensile</p></div>
-                <div class="spec-cell"><h4>Surface Finish</h4><p>AkzoNobel Powder Coating</p></div>
-                <div class="spec-cell"><h4>Warranty</h4><p>20-Year Structural Integrity</p></div>
-                <div class="spec-cell"><h4>Post Profile</h4><p>200 x 200 x 3.0 mm</p></div>
-                <div class="spec-cell"><h4>Blade Width</h4><p>230mm Dual-Wall Aerofoil</p></div>
-                <div class="spec-cell"><h4>Motor System</h4><p>24V DC Internal Linear Drive</p></div>
-                <div class="spec-cell"><h4>Snow Rating</h4><p>80-100 kg/m²</p></div>
-                <div class="spec-cell"><h4>Max Size</h4><p>4,000 x 7,000 mm (Single)</p></div>
-                <div class="spec-cell"><h4>Certification</h4><p>CE / ISO / TUV / SGS</p></div>
+                <div class="spec-cell"><h4>Frame Material</h4><p>6063-T6 Aluminum</p></div>
+                <div class="spec-cell"><h4>Coating</h4><p>AkzoNobel Powder (Class 2)</p></div>
+                <div class="spec-cell"><h4>Post Size</h4><p>150 x 150 x 3.0mm</p></div>
+                <div class="spec-cell"><h4>Louver Profile</h4><p>230 x 40 x 1.8mm</p></div>
+                <div class="spec-cell"><h4>Max Span</h4><p>4.5m x 7.0m (Per Module)</p></div>
+                <div class="spec-cell"><h4>Water Management</h4><p>Internal Gutter System</p></div>
+                <div class="spec-cell"><h4>Drive System</h4><p>Somfy / Brealu Dual Drive</p></div>
+                <div class="spec-cell"><h4>Retraction Time</h4><p>45 Seconds (Full Clear)</p></div>
+                <div class="spec-cell"><h4>Certification</h4><p>CE / TUV / SGS / Qualicoat</p></div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Section: FAQ -->
     <section id="faq" class="section-padding">
         <div class="container">
-            <h2 class="text-center" style="font-size: 3rem; margin-bottom: 60px;">Questions & Answers</h2>
+            <div class="text-center" style="margin-bottom:80px;">
+                <h2 style="font-size:3rem;">Expert <strong>Knowledge.</strong></h2>
+            </div>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-q"><i class="fas fa-question-circle"></i> What is the service life of the motor?</div>
-                    <div class="faq-a">Normally, the service life of the motor is more than 5 years. We recommend placing orders to purchase spare parts for after-sales needs to ensure continuous operation.</div>
+                    <div class="faq-q"><i class="fas fa-question-circle"></i> Is the R230 100% waterproof?</div>
+                    <div class="faq-a">Yes. When closed, the interlocking louvers create a watertight seal. Rainwater is channeled through an internal gutter system and discharged via the corner posts.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q"><i class="fas fa-question-circle"></i> Is the system easy for DIY installation?</div>
-                    <div class="faq-a">Yes, we provide specialized 3D installation videos and manuals. Each component is precision-cut at the factory for a perfect fit. Most residential projects can be completed in 2-3 days by two adults.</div>
+                    <div class="faq-q"><i class="fas fa-question-circle"></i> How long does installation take?</div>
+                    <div class="faq-a">A standard 4x7m R230 module typically requires 2-3 professional installers and can be completed in approximately 12-16 hours. We provide full technical blueprints.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-q"><i class="fas fa-question-circle"></i> Can the size be customized beyond 7 meters?</div>
-                    <div class="faq-a">Absolutely. While 4x7m is the single-module limit for 4 posts, our systems are modular. We can join multiple units together to cover any length required for commercial or large residential projects.</div>
+                    <div class="faq-q"><i class="fas fa-question-circle"></i> Can it be integrated with Home Assistant?</div>
+                    <div class="faq-a">Absolutely. Our smart motors support Zigbee and Tuya protocols, allowing for seamless integration with Google Home, Alexa, and professional KNX systems.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section id="contact" class="section-padding" style="background: var(--primary); color: white; text-align: center;">
-        <div class="container">
-            <h2 style="color: white; font-size: 4rem; margin-bottom: 20px;">Ready to Elevate Your Space?</h2>
-            <p style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 50px;">Get a free 24-hour engineering blueprint and technical consultation.</p>
-            <a href="#" class="btn-cta" style="background: white; color: var(--primary); padding: 25px 80px;">Get My Quote Now</a>
+    <!-- Section: Contact / Inquiry -->
+    <section id="contact" class="section-padding bg-dark">
+        <div class="container" style="max-width:800px;">
+            <div class="text-center" style="margin-bottom:50px;">
+                <h2>Request Technical <strong>Blueprint.</strong></h2>
+                <p style="color:rgba(255,255,255,0.6);">Our engineers will provide a custom 3D proposal within 24 hours.</p>
+            </div>
+            <form style="display:grid; gap:20px;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <input type="text" placeholder="Full Name" style="padding:15px; border-radius:4px; border:none; background:rgba(255,255,255,0.05); color:white;">
+                    <input type="email" placeholder="Email Address" style="padding:15px; border-radius:4px; border:none; background:rgba(255,255,255,0.05); color:white;">
+                </div>
+                <input type="text" placeholder="Project Location (City, Country)" style="padding:15px; border-radius:4px; border:none; background:rgba(255,255,255,0.05); color:white;">
+                <textarea placeholder="Project Details (Dimensions, Requirements)" rows="5" style="padding:15px; border-radius:4px; border:none; background:rgba(255,255,255,0.05); color:white;"></textarea>
+                <button type="submit" class="btn-inquire-now" style="width:100%;">Submit Inquiry</button>
+            </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="f-grid">
                 <div>
-                    <div class="f-logo"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu"></div>
-                    <p style="color: #9ca3af;">Premium architectural solutions for professional outdoor living. Engineered in Foshan, deployed worldwide.</p>
+                    <div class="f-logo"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo"></div>
+                    <p style="color:#6b7280; font-size:0.95rem; line-height:1.6;">Breathe · Relax · Embrace. <br>The Architectural Standard for Premium Outdoor Living.</p>
                 </div>
                 <div>
-                    <h4 class="f-title">Quick Links</h4>
+                    <h4 class="f-title">Solutions</h4>
                     <ul class="f-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pergola-v3-alunotec.html">Product Categories</a></li>
-                        <li><a href="#">Technical Guide</a></li>
-                        <li><a href="#">Factory Tour</a></li>
+                        <li><a href="pergola-v3-alunotec.html">Pergola Series</a></li>
+                        <li><a href="outdoor-kitchen-v3-alunotec.html">Outdoor Kitchens</a></li>
+                        <li><a href="pergola-addons.html">Ecosystem Add-ons</a></li>
+                        <li><a href="projects.html">Global Projects</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="f-title">Pergola Series</h4>
+                    <h4 class="f-title">Resources</h4>
                     <ul class="f-links">
-                        <li><a href="#">BRE-R230 (Flagship)</a></li>
-                        <li><a href="#">BRE-220 (Heavy Duty)</a></li>
-                        <li><a href="#">BRE-175U (Elite)</a></li>
-                        <li><a href="#">BRE-140U (In Stock)</a></li>
+                        <li><a href="projects.html">Global Case Studies</a></li>
+                        <li><a href="news.html">News & Technical</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="f-title">Contact Us</h4>
-                    <p style="color: #9ca3af;">boaz@brealuoutdoor.com<br>+86 17812581015<br>WhatsApp Available</p>
+                    <h4 class="f-title">Global</h4>
+                    <ul class="f-links">
+                        <li><a href="#">WhatsApp: +86 17812581015</a></li>
+                        <li><a href="contact.html">boaz@brealuoutdoor.com</a></li>
+                        <li><a href="#">Foshan Production Base</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="f-bottom">
-                <p>&copy; 2026 Brealu Outdoor. All rights reserved.</p>
-                <p>Designed with Architectural Precision.</p>
+                <p>&copy; 2026 Brealu Outdoor Group. All Rights Reserved.</p>
+                <div style="display:flex; gap:30px;">
+                    <a href="#" style="color:inherit; text-decoration:none;">Privacy Policy</a>
+                    <a href="#" style="color:inherit; text-decoration:none;">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Gallery Swap
+        const mainImg = document.getElementById('mainImg');
+        const thumbs = document.querySelectorAll('.thumb-item');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                mainImg.src = thumb.querySelector('img').src;
+                thumbs.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>

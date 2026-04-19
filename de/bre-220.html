@@ -1,0 +1,1030 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRE-220 Heavy Duty | Maximale Spannweite & Stärke | Brealu Outdoor</title>
+    
+    <!-- Premium Typography & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --primary-dark: #003366;
+            --accent: #FF6600;
+            --dark: #0f172a;
+            --gray-900: #111827;
+            --gray-600: #4b5563;
+            --gray-100: #f3f4f6;
+            --white: #ffffff;
+            --border: #E2E8F0;
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--gray-900); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--dark); }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        
+        /* --- Utilities --- */
+        .section-padding { padding: 120px 0; }
+        .text-center { text-align: center; }
+        .bg-dark { background: var(--dark); color: var(--white); }
+        .bg-light { background: var(--gray-100); }
+        .tag { color: var(--primary); font-weight: 800; font-size: 0.8rem; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        /* --- Header --- */
+        header { padding: 25px 0; position: sticky; width: 100%; top: 0; z-index: 1000; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 48px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.95rem; margin-left: 40px; transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        
+        /* Sub-Nav */
+        .sub-nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); position: sticky; top: 99px; z-index: 900; padding: 15px 0; display: flex; justify-content: center; gap: 40px; }
+        .sub-nav a { text-decoration: none; color: var(--gray-600); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
+        .sub-nav a:hover { color: var(--primary); }
+
+        /* --- PDP Main Grid --- */
+        .pdp-main-section { padding: 30px 0 60px; }
+        .pdp-grid { display: grid; grid-template-columns: 550px 1fr; gap: 60px; align-items: start; }
+        
+        .gallery-container { width: 550px; }
+        .main-stage { width: 100%; aspect-ratio: 1/1; border: 1px solid #eee; margin-bottom: 15px; position: relative; overflow: hidden; background: #f9f9f9; }
+        .main-stage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .thumb-strip { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .thumb-item { width: 83px; height: 83px; border: 1px solid #ddd; cursor: pointer; transition: var(--transition); flex-shrink: 0; aspect-ratio: 1/1; }
+        .thumb-item:hover, .thumb-item.active { border: 2.5px solid var(--primary); }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .info-panel { padding-right: 20px; }
+        .breadcrumb { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 25px; font-weight: 600; }
+        .breadcrumb a { color: inherit; text-decoration: none; }
+        .breadcrumb span { margin: 0 10px; opacity: 0.5; }
+
+        h1 { font-size: 2.2rem; line-height: 1.15; margin-bottom: 20px; color: var(--dark); font-weight: 800; }
+        .pdp-price { font-size: 2rem; color: var(--primary); font-weight: 800; margin-bottom: 10px; display: block; font-family: 'Outfit'; }
+        
+        .attr-btn { 
+            padding: 8px 18px; 
+            border: 1px solid var(--border); 
+            border-radius: 6px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: 0.2s; 
+            background: white; 
+            color: var(--gray-600);
+            display: inline-block;
+        }
+        .attr-btn:hover { border-color: var(--primary); color: var(--primary); }
+        .attr-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+        .cta-area { display: flex; flex-direction: column; gap: 15px; margin-top: 40px; }
+        .btn-pdp { padding: 22px 40px; border-radius: 12px; font-weight: 800; text-align: center; font-size: 1.1rem; transition: var(--transition); text-transform: uppercase; cursor: pointer; letter-spacing: 1px; display: block; text-decoration: none; }
+        .btn-pdp-primary { background: var(--accent); color: white; border: none; }
+        .btn-pdp-primary:hover { background: #e65c00; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255,102,0,0.25); }
+        .btn-pdp-wa { background: #25D366; color: white; border: none; }
+        
+        /* --- Performance Sections --- */
+        .perf-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .perf-card { background: white; padding: 40px; border-radius: 20px; border: 1px solid var(--border); transition: 0.3s; }
+        .perf-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
+        .perf-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* Bento Grid */
+        /* Refined Portfolio Bento Grid (Top-tier Design) */
+        .bento-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            grid-auto-rows: 300px; 
+            gap: 24px; 
+        }
+        .bento-item { 
+            position: relative; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            background: #111;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bento-item:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
+        .bento-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            opacity: 0.9;
+        }
+        .bento-item:hover img { 
+            transform: scale(1.08); 
+            opacity: 1;
+        }
+        .bento-overlay { 
+            position: absolute; 
+            inset: 0; 
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 100%); 
+            display: flex; 
+            flex-direction: column;
+            justify-content: flex-end; 
+            padding: 35px; 
+            color: white; 
+            opacity: 0; 
+            transition: 0.5s ease; 
+        }
+        .bento-item:hover .bento-overlay { 
+            opacity: 1; 
+        }
+        .bento-tag {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: var(--accent);
+            transform: translateY(20px);
+            transition: 0.5s 0.1s;
+        }
+        .bento-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 0;
+            transform: translateY(20px);
+            transition: 0.5s 0.2s;
+            font-family: 'Outfit';
+        }
+        .bento-item:hover .bento-tag, 
+        .bento-item:hover .bento-title {
+            transform: translateY(0);
+        }
+
+        /* Span Variants */
+        .bento-feat { grid-column: span 2; grid-row: span 2; }
+        .bento-wide { grid-column: span 2; }
+        .bento-tall { grid-row: span 2; }
+
+        /* FAQ */
+        .faq-grid { display: grid; gap: 15px; max-width: 900px; margin: 0 auto; }
+        .faq-box { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+        .faq-box h4 { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; margin: 0; }
+        .faq-box h4::after { content: '+'; font-size: 1.5rem; color: var(--primary); }
+        .faq-box.active h4::after { content: '?; }
+        .faq-content { max-height: 0; overflow: hidden; transition: 0.4s; background: var(--gray-100); }
+        .faq-box.active .faq-content { max-height: 500px; padding: 25px; }
+
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 80px 0 40px; }
+        .f-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 60px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 60px; margin-bottom: 40px; }
+        .f-logo img { height: 48px; margin-bottom: 25px; }
+        .f-bottom { display: flex; justify-content: space-between; color: #888; font-size: 0.9rem; }
+        
+        @media (max-width: 1100px) {
+            .pdp-grid { grid-template-columns: 1fr; }
+            .gallery-container { width: 100%; }
+        }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        .nav-links .dropdown { top: 100% !important; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+        
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; }
+        @media (max-width: 1280px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+        }
+        
+    </style>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/bre-220.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/bre-220.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/bre-220.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/bre-220.html">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo"></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Startseite</a>
+                <a href="pergola-v3-alunotec.html" class="active">Pergola</a>
+                <a href="outdoor-kitchen-v3-alunotec.html">Kitchen</a>
+                <a href="projects.html">Projekte</a>
+                <a href="pergola-comparison.html">Comparison</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sub-Nav -->
+    <div class="sub-nav">
+        <a href="#technical">Technical</a>
+        <a href="#performance">Performance</a>
+        <a href="#drainage">Drainage</a>
+        <a href="#customize">Customize</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#faq">FAQ</a>
+    </div>
+
+    <!-- Main PDP Section -->
+    <section class="pdp-main-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a><span>/</span>
+                <a href="pergola-v3-alunotec.html">Pergola</a><span>/</span>
+                <span>BRE-220 Heavy Duty</span>
+            </div>
+
+            <div class="pdp-grid">
+                <!-- Gallery 1:1 -->
+                <div class="gallery-container">
+                    <div class="main-stage" id="mainStage">
+                        <img src="https://sc01.alicdn.com/kf/H5cced650d2b644ae9c813bfd4ca0c0b1Q.jpg" alt="BRE-220 Main Stage" id="mainImg">
+                    </div>
+                    <div class="thumb-strip">
+                        <div class="thumb-item active"><img src="https://sc01.alicdn.com/kf/H5cced650d2b644ae9c813bfd4ca0c0b1Q.jpg" alt="220?></div>
+                        <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H53c80449e7354901a9b7baeff026b573W.jpg" alt="220"></div>
+                        <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H8385875ca70143e48abb59880c9f17e0G.jpg" alt="220-1"></div>
+                        <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/He16186c5b1dc4477bc0ec08ca78e627cR.jpg" alt="220?40"></div>
+                        <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/H02b1dff36992480bbaf93c2e98fd6acan.jpg" alt="220?40-"></div>
+                        <div class="thumb-item"><img src="https://sc01.alicdn.com/kf/Hce41c28123434d3ca110ccd9d56b7dc4s.jpg" alt="220"></div>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="info-panel">
+                    <div class="p-title-area">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                            <span style="background: var(--primary); color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; letter-spacing: 1px;">HOT SELLING</span>
+                            <span style="color: var(--gray-600); font-size: 0.85rem; font-weight: 700;">Model: BRE-220</span>
+                        </div>
+                        <h1>Brealu New BRE-220 | Custom Motorized Heavy-Duty Louver Pergola System</h1>
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                            <div style="color: #FBBF24; font-size: 0.9rem;">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span style="font-size: 0.9rem; font-weight: 700;">4.9 Rating (286 Reviews)</span>
+                        </div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #64748b; margin-top: -5px; margin-bottom: 30px;">Express Lead Time: 7-10 Days | MOO: 1 Set</div>
+                    </div>
+
+                    <div style="background: #F8FAFC; padding: 30px; border-radius: 15px; border: 1px solid var(--border);">
+                        <!-- Attribute Selectors -->
+                        <div class="attribute-group" style="margin-bottom: 25px;">
+                            <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: var(--gray-600);">CHOOSE SIZE:</div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="attr-btn active">3m x 3m</span>
+                                <span class="attr-btn">3m x 4m</span>
+                                <span class="attr-btn">3m x 5m</span>
+                                <span class="attr-btn">3m x 6m</span>
+                                <span class="attr-btn">4m x 4m</span>
+                                <span class="attr-btn">4m x 5m</span>
+                                <span class="attr-btn">4m x 6m</span>
+                                <span class="attr-btn">Custom Sizes</span>
+                            </div>
+                        </div>
+
+                        <div class="attribute-group" style="margin-bottom: 25px;">
+                            <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: var(--gray-600);">COLOR (AKZONOBEL):</div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="attr-btn active">Gray RAL 7043</span>
+                                <span class="attr-btn">Weiß RAL 9016</span>
+                                <span class="attr-btn">Custom Colors</span>
+                            </div>
+                        </div>
+
+                        <div class="attribute-group" style="margin-bottom: 25px;">
+                            <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: var(--gray-600);">INSTALLATION TYPE:</div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="attr-btn active">Freestanding</span>
+                                <span class="attr-btn">Wall-Mounted</span>
+                            </div>
+                        </div>
+
+                        <div class="attribute-group" style="margin-bottom: 25px;">
+                            <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: var(--gray-600);">OPTIONAL ADD-ONS:</div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                <span class="attr-btn">Zip Screen</span>
+                                <span class="attr-btn">Glass Door</span>
+                                <span class="attr-btn">Aluminum Shutter</span>
+                                <span class="attr-btn">Others</span>
+                            </div>
+                        </div>
+
+                        <div class="cta-area" style="margin-top: 40px;">
+                            <a href="contact.html" class="btn-pdp btn-pdp-primary">GET LATEST PRICE</a>
+                            <a href="https://wa.me/8617812581015" class="btn-pdp btn-pdp-wa"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> WHATSAPP INQUIRY</a>
+                        </div>
+                        <p style="text-align: center; font-size: 0.8rem; color: #94a3b8; font-weight: 700; margin-top: 20px;">
+                            <i class="fas fa-certificate" style="color: var(--primary);"></i> ISO 9001 & CE CERTIFIED PRODUCTION
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Overview -->
+    <section class="section-padding" id="overview">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="tag">Overview</span>
+                <h2>Redefining Outdoor Engineering</h2>
+            </div>
+            <img src="https://sc01.alicdn.com/kf/Hccd2a776d04740b6a711ffbbdd96a9d8X.jpg" alt="BRE-220 Overview" style="width: 100%; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.1);">
+        </div>
+    </section>
+
+    <!-- Section 2: Main Features (Refactored for High Conversion) -->
+    <section class="section-padding bg-light" id="features">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag">Main Features</span>
+                <h2>Architectural Excellence in Every Detail</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;">
+                <!-- Left: HD Structural Rendering -->
+                <div style="position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/H6888ab467add4293884439e3acb4e22cr.jpg" alt="BRE-220 Structural Rendering" style="width: 100%; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.12); border: 1px solid #eee;">
+                    <!-- Floating Tech Badge -->
+                    <div style="position: absolute; bottom: 30px; left: 30px; background: rgba(255,255,255,0.9); backdrop-filter: blur(12px); padding: 18px 30px; border-radius: 12px; border-left: 6px solid var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                        <div style="font-weight: 800; font-size: 0.7rem; color: var(--primary); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Surface Engineering</div>
+                        <div style="font-weight: 700; color: var(--dark); font-size: 1.05rem; font-family: 'Outfit';">AkzoNobel Qualicoat Class 2</div>
+                    </div>
+                </div>
+
+                <!-- Right: Vectorized Technical List -->
+                <div style="display: flex; flex-direction: column; gap: 45px;">
+                    <!-- 6063-T6 -->
+                    <div style="display: flex; gap: 25px; align-items: flex-start;">
+                        <div style="width: 58px; height: 58px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex-shrink: 0; border: 1px solid var(--border);">
+                            <i class="fas fa-microchip" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.35rem; margin-bottom: 10px; font-weight: 800; color: var(--dark);">6063-T6 Structural Grade</h4>
+                            <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7;">High-tensile architectural aluminum alloy, specifically extruded for maximum rigidity and zero-sag over large spans.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sunshade -->
+                    <div style="display: flex; gap: 25px; align-items: flex-start;">
+                        <div style="width: 58px; height: 58px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex-shrink: 0; border: 1px solid var(--border);">
+                            <i class="fas fa-sun" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.35rem; margin-bottom: 10px; font-weight: 800; color: var(--dark);">Advanced Sunshade Control</h4>
+                            <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7;">Motorized 0-120 louver rotation provides precision micro-climate management and total UV protection.</p>
+                        </div>
+                    </div>
+
+                    <!-- Hurricane -->
+                    <div style="display: flex; gap: 25px; align-items: flex-start;">
+                        <div style="width: 58px; height: 58px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex-shrink: 0; border: 1px solid var(--border);">
+                            <i class="fas fa-wind" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.35rem; margin-bottom: 10px; font-weight: 800; color: var(--dark);">Hurricane-Tested Integrity</h4>
+                            <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7;">Certified to maintain structural stability during high-velocity wind events up to 220 km/h (Category 4).</p>
+                        </div>
+                    </div>
+
+                    <!-- Rainproof -->
+                    <div style="display: flex; gap: 25px; align-items: flex-start;">
+                        <div style="width: 58px; height: 58px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex-shrink: 0; border: 1px solid var(--border);">
+                            <i class="fas fa-cloud-showers-heavy" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.35rem; margin-bottom: 10px; font-weight: 800; color: var(--dark);">100% Rainproof Sealing</h4>
+                            <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7;">Precision interlocking blades form an absolute water-tight seal when closed, ensuring a completely dry patio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Installation -->
+                    <div style="display: flex; gap: 25px; align-items: flex-start;">
+                        <div style="width: 58px; height: 58px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); flex-shrink: 0; border: 1px solid var(--border);">
+                            <i class="fas fa-tools" style="font-size: 1.5rem; color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.35rem; margin-bottom: 10px; font-weight: 800; color: var(--dark);">Professional Modular Setup</h4>
+                            <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7;">Factory pre-calibrated components designed for rapid professional installation with perfect structural alignment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Performance -->
+    <section class="section-padding" id="performance">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div>
+                    <span class="tag">Performance Data</span>
+                    <h2>Unyielding Strength</h2>
+                    <p class="lead" style="margin-bottom: 40px;">The BRE-220 is not just a pergola; it's a structural masterpiece designed to thrive in the world's most demanding environments.</p>
+                    
+                    <div style="display: grid; gap: 30px;">
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-palette" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">AkzoNobel Powder (Qualicoat 2)</h4>
+                                <p style="font-size: 0.95rem; color: var(--gray-600);">World-class architectural coating with 15-year color fastness and superior scratch resistance.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-snowflake" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Snow Load: 80-115cm</h4>
+                                <p style="font-size: 0.95rem; color: var(--gray-600);">Heavy-duty double-layer louvers support significant static snow accumulation without deformation.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px; align-items: flex-start;">
+                            <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-wind" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Wind Resistance: 180-220 km/h</h4>
+                                <p style="font-size: 0.95rem; color: var(--gray-600);">Aerodynamic profile and reinforced connectors ensure stability during Category 4 hurricanes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/H86b09f137fe14fce9504829ebda0f250H.png" alt="Post Cross-Section Rendering" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+                    <div style="position: absolute; bottom: -30px; left: -30px; background: var(--accent); color: white; padding: 30px; border-radius: 15px; box-shadow: 0 20px 40px rgba(255,102,0,0.3);">
+                        <span style="font-size: 2.5rem; font-weight: 800; display: block; line-height: 1;">20Y</span>
+                        <span style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Structural Warranty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3.5: Structural Engineering & Expansion -->
+    <section class="section-padding bg-light" id="engineering" style="padding-top: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <!-- Left: Technical Connection Detail -->
+                <div style="position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/H007943b6fd684c6aae7418cbf7ffa3a46.jpg" alt="Structural Connection Detail" style="width: 100%; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.12); border: 1px solid #eee;">
+                    <!-- Performance Tag -->
+                    <div style="position: absolute; top: 30px; left: 30px; background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <span style="font-weight: 800; color: var(--primary); font-size: 0.8rem; text-transform: uppercase;">Stability Index: 100%</span>
+                    </div>
+                </div>
+
+                <!-- Right: Value Proposition -->
+                <div>
+                    <span class="tag">Engineering Innovation</span>
+                    <h2 style="margin-bottom: 25px;">Engineered for Stability & Infinite Scalability</h2>
+                    <p class="lead" style="margin-bottom: 40px; color: var(--gray-600);">Our ingenious structural design ensures absolute stability and a significantly extended service life for the entire system. Beyond core integrity, our modular architecture offers infinite spatial expansion, adapting seamlessly to any project scalerom private patios to large-scale commercial developments.</p>
+                    
+                    <div style="display: grid; gap: 25px;">
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <div style="width: 48px; height: 48px; background: rgba(0, 74, 153, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span style="font-weight: 700; color: var(--dark);">Unyielding Strukturelle Integrität</span>
+                        </div>
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <div style="width: 48px; height: 48px; background: rgba(0, 74, 153, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                            </div>
+                            <span style="font-weight: 700; color: var(--dark);">Modular Infinite Expansion</span>
+                        </div>
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <div style="width: 48px; height: 48px; background: rgba(0, 74, 153, 0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <span style="font-weight: 700; color: var(--dark);">Extended System Lifespan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3.7: Drainage System -->
+    <section class="section-padding" id="drainage" style="padding-top: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <!-- Left: Text -->
+                <div>
+                    <span class="tag">Water Management</span>
+                    <h2>Advanced Invisible Drainage</h2>
+                    <p class="lead" style="margin-bottom: 30px;">Our patented internal guttering system ensures 100% water diversion. Rain is collected in the louvers, funneled to perimeter gutters, and discharged through the pillars invisibly.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px; font-weight: 700;">
+                        <li><i class="fas fa-check" style="color: #22C55E; margin-right: 12px;"></i> Zero External Pipes or Gutters</li>
+                        <li><i class="fas fa-check" style="color: #22C55E; margin-right: 12px;"></i> High-Flow Capacity for Storm Rain</li>
+                        <li><i class="fas fa-check" style="color: #22C55E; margin-right: 12px;"></i> Integrated Leaf Filtration</li>
+                    </ul>
+                </div>
+                <!-- Right: Video -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.15); transform: translateY(20px);">
+                    <video autoplay muted loop playsinline style="width: 100%; display: block;">
+                        <source src="../drainage-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Customize (Redesigned for Premium Selection) -->
+    <section class="section-padding bg-dark" id="customize" style="color: white; overflow: hidden;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag" style="color: white; border-color: rgba(255,255,255,0.3);">Customization</span>
+                <h2 style="color: white;">Tailored Architectural Harmony</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">Personalize your outdoor structure with our professional color palette and integrated intelligent lighting systems.</p>
+            </div>
+
+            <!-- Part 1: Color Customization -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px;">
+                <div>
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 25px;">Premium Color Palette</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 40px; line-height: 1.8;">Our profiles are finished with AkzoNobel Qualicoat Class 2 powder coating, ensuring 15+ years of color fastness and UV resistance. Choose from our architectural standards or specify any RAL code for perfect project integration.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <!-- RAL 9011 -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: #1D1E22; border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem;">Black</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">RAL 9011</div>
+                        </div>
+                        <!-- RAL 7016 -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: #383E42; border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem;">Anthracite Gray</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">RAL 7016</div>
+                        </div>
+                        <!-- RAL 9016 -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: #FFFFFF; border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem; color: white;">Weiß</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">RAL 9016</div>
+                        </div>
+                        <!-- RAL 8014 -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: #4B3621; border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem;">Brown</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">RAL 8014</div>
+                        </div>
+                        <!-- RAL 7043 -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: #4E5452; border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem;">Dunkelgrau</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">RAL 7043</div>
+                        </div>
+                        <!-- Custom Color -->
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); border-radius: 50%; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.2);"></div>
+                            <div style="font-weight: 700; font-size: 0.85rem;">Custom Color</div>
+                            <div style="font-size: 0.7rem; opacity: 0.6;">Any RAL Code</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/H5073af4c8a824083a66b634f61955be00.jpg" alt="Color & Architectural Customization" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                    <div style="position: absolute; top: -20px; right: -20px; background: var(--accent); padding: 20px; border-radius: 12px; font-weight: 800; font-size: 0.9rem; box-shadow: 0 10px 20px rgba(0,0,0,0.3);">UV-STABLE FINISH</div>
+                </div>
+            </div>
+
+            <!-- Part 2: Integrated Lighting -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div style="order: 2;">
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 25px;">Integrated Intelligent Lighting</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 40px; line-height: 1.8;">Transform your outdoor space into an evening sanctuary. Our lighting systems are built directly into the structure for a clean, architectural look with full smartphone control.</p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 30px;">
+                        <!-- LED Strip -->
+                        <div style="display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-grip-lines" style="color: #FFD700; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">LED Perimeter Strip</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Warm or cool white lighting integrated into the gutter profiles.</p>
+                            </div>
+                        </div>
+                        <!-- Spot Light -->
+                        <div style="display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-lightbulb" style="color: #FFD700; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">Architectural Spot Lights</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">High-intensity focused lighting embedded in the louvers.</p>
+                            </div>
+                        </div>
+                        <!-- RGB Light -->
+                        <div style="display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-palette" style="color: #FFD700; font-size: 1.2rem;"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">Smart RGB System</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.6;">Millions of color options via app control for any mood.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="order: 1; position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/He60702151d0745baa8acb641da5d52bfn.jpg" alt="Evening Lighting Ambience" style="width: 100%; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                    <div style="position: absolute; bottom: 30px; left: 30px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); padding: 15px 25px; border-radius: 10px; border-left: 4px solid var(--accent);">
+                        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8;">Ambiance Control</div>
+                        <div style="font-weight: 800;">Smartphone Integrated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Installation Methods -->
+    <section class="section-padding" id="installation">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag">Installation</span>
+                <h2>Architectural Versatility</h2>
+                <p class="lead" style="max-width: 700px; margin: 0 auto;">Our system supports multiple installation configurations, from freestanding outdoor pavilions to seamless wall-mounted extensions, designed for total architectural harmony.</p>
+            </div>
+            
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <img src="https://sc01.alicdn.com/kf/Hbd2bf8a06c68470b90b28e3f8abd94aeA.png" alt="BRE-220 Installation Configurations" style="width: 100%; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.12); border: 1px solid #eee;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Side Components -->
+    <section class="section-padding bg-light" id="components">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag">Accessories</span>
+                <h2>Complete Your Oasis</h2>
+                <p class="lead" style="max-width: 700px; margin: 0 auto;">Enhance your BRE-220 with our comprehensive range of modular side components, designed for privacy, climate control, and architectural flair.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center;">
+                <!-- Left: Accessories Explosion Diagram -->
+                <div style="position: relative;">
+                    <img src="https://sc01.alicdn.com/kf/Hde3d923aebaa4f30be005451958df3477.png" alt="BRE-220 Accessories Ecosystem" style="width: 100%; border-radius: 24px; box-shadow: 0 40px 100px rgba(0,0,0,0.12); border: 1px solid #eee;">
+                </div>
+
+                <!-- Right: 6-Grid Accessory List -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <!-- 1 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">Sheer Curtain</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Elegant, light-diffusing fabric for soft privacy.</div>
+                    </div>
+                    <!-- 2 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">Zip Screens</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Motorized wind & insect protection.</div>
+                    </div>
+                    <!-- 3 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">Glass Systems</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Frameless sliding doors for 4-season use.</div>
+                    </div>
+                    <!-- 4 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">ALU Shutters</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Fixed or sliding vertical architectural louvers.</div>
+                    </div>
+                    <!-- 5 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">Blade Screen</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Operable vertical blades for precise privacy.</div>
+                    </div>
+                    <!-- 6 -->
+                    <div style="background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                        <div style="font-weight: 800; color: var(--dark); font-size: 1.05rem; margin-bottom: 8px;">Fixed ALU Wall</div>
+                        <div style="font-size: 0.8rem; color: var(--gray-600); line-height: 1.5;">Solid aluminum panels for total enclosure.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 8: Why Choose Us -->
+    <section class="section-padding bg-dark" id="why-us" style="color: white;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag" style="color: white;">Trust Signals</span>
+                <h2 style="color: white;">The Brealu Advantage</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center;">
+                <div>
+                    <i class="fas fa-industry" style="font-size: 3rem; color: var(--accent); margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px;">Factory Direct</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Cut out the middleman. Get premium engineering at manufacturer pricing.</p>
+                </div>
+                <div>
+                    <i class="fas fa-medal" style="font-size: 3rem; color: var(--accent); margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px;">Quality Certified</h3>
+                    <p style="color: rgba(255,255,255,0.6);">ISO 9001 and CE certified production ensuring global safety standards.</p>
+                </div>
+                <div>
+                    <i class="fas fa-headset" style="font-size: 3rem; color: var(--accent); margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px;">Expert Support</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Dedicated engineering team for custom drawings and installation guidance.</p>
+                </div>
+                <div>
+                    <i class="fas fa-shipping-fast" style="font-size: 3rem; color: var(--accent); margin-bottom: 25px;"></i>
+                    <h3 style="color: white; margin-bottom: 15px;">Weltweite Logistik</h3>
+                    <p style="color: rgba(255,255,255,0.6);">Rapid 7-10 day express lead times and professional export handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Project Portfolio (Bento Grid Design) -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag">Portfolio</span>
+                <h2>Global Project Execution</h2>
+                <p class="lead" style="max-width: 700px; margin: 0 auto;">Explore our curated selection of high-end residential and commercial installations across 50+ countries. Engineering excellence meets architectural vision.</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- 1: Featured Poolside (2x2) -->
+                <div class="bento-item bento-feat">
+                    <img src="https://sc01.alicdn.com/kf/H4c5b6b76f6724f9b8030adc3a8827a50v.jpg" alt="Luxury Villa - Sydney">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Villa - Sydney</span>
+                        <h4 class="bento-title">Panoramic Poolside Sanctuary</h4>
+                    </div>
+                </div>
+
+                <!-- 2: Wide Mt Maunganui (2x1) -->
+                <div class="bento-item bento-wide">
+                    <img src="https://sc01.alicdn.com/kf/Hc8285efeae694653a66e64cc139e6d28n.jpg" alt="Mt Maunganui Project">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Coastal - New Zealand</span>
+                        <h4 class="bento-title">Mt Maunganui High-Performance Deck</h4>
+                    </div>
+                </div>
+
+                <!-- 3: Standard Modern Architecture (1x1) -->
+                <div class="bento-item">
+                    <img src="https://sc01.alicdn.com/kf/H9d48fe246e834c2295b534fef7838e39g.jpg" alt="Modern Architecture">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Residential - USA</span>
+                        <h4 class="bento-title">Modern Minimalist Estate</h4>
+                    </div>
+                </div>
+
+                <!-- 4: Night Lighting (1x1) -->
+                <div class="bento-item">
+                    <img src="https://sc01.alicdn.com/kf/H6e10d547980c46cc9d22e0c3eb466c11c.jpg" alt="Evening Ambiance">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Hospitality - Dubai</span>
+                        <h4 class="bento-title">Nocturnal Luxury Hub</h4>
+                    </div>
+                </div>
+
+                <!-- 5: Garden Lounge (1x1) -->
+                <div class="bento-item">
+                    <img src="https://sc01.alicdn.com/kf/Hb99f69d0d8e3483080e99e192aafefdef.jpg" alt="Garden Lounge">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Private Garden - Germany</span>
+                        <h4 class="bento-title">Bespoke Garden Pavilion</h4>
+                    </div>
+                </div>
+
+                <!-- 6: Commercial Wide Dining (2x1) -->
+                <div class="bento-item bento-wide">
+                    <img src="https://sc01.alicdn.com/kf/H54e7f009ddac45899b435c89980d4cd56.jpg" alt="Commercial Dining">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Commercial - London</span>
+                        <h4 class="bento-title">Rooftop Gastronomy Experience</h4>
+                    </div>
+                </div>
+
+                <!-- 7: Tall Modern Residential (1x2) -->
+                <div class="bento-item bento-tall">
+                    <img src="https://sc01.alicdn.com/kf/H253c71c99d004cd3a1f123fbe5f2d603O.jpg" alt="Modern Residential">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Villa - Spain</span>
+                        <h4 class="bento-title">Architectural Glass Integration</h4>
+                    </div>
+                </div>
+
+                <!-- 8: Weiß Pergola (1x1) -->
+                <div class="bento-item">
+                    <img src="https://sc01.alicdn.com/kf/H5618773f74d24ab1ac8c9c2a2870c21aJ.jpg" alt="Weiß Pergola Canada">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Lakeside - Canada</span>
+                        <h4 class="bento-title">Frost-Rated Weiß Pavilion</h4>
+                    </div>
+                </div>
+
+                <!-- 9: Modern/Dark Wide (2x1) -->
+                <div class="bento-item bento-wide">
+                    <img src="https://sc01.alicdn.com/kf/H0c97f99fc6ff48c1ab6856b8cc41fdb27.jpg" alt="Modern Dark USA">
+                    <div class="bento-overlay">
+                        <span class="bento-tag">Estate - California</span>
+                        <h4 class="bento-title">High-Contrast Urban Oasis</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Customer Reviews -->
+    <section class="section-padding bg-light" id="reviews">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="tag">Voice of Customer</span>
+                <h2>What Professionals Say</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="color: #FBBF24; margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--gray-600); margin-bottom: 25px;">"The structural integrity of the BRE-220 is unmatched. We installed three units for a rooftop bar in London, and the hurricane-rated profiles provided the exact peace of mind our client needed."</p>
+                    <h5 style="margin: 0; font-weight: 800;">James Henderson</h5>
+                    <span style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">Architectural Developer, UK</span>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="color: #FBBF24; margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--gray-600); margin-bottom: 25px;">"Exceptional attention to detail. The AkzoNobel finish is perfect, and the internal drainage works flawlessly even during heavy tropical storms. Highly recommended."</p>
+                    <h5 style="margin: 0; font-weight: 800;">Marco Rossi</h5>
+                    <span style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">Luxury Home Builder, Italy</span>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <div style="color: #FBBF24; margin-bottom: 20px;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-style: italic; color: var(--gray-600); margin-bottom: 25px;">"Brealu's engineering team provided detailed CAD drawings that made the custom integration simple. The modularity of the 220 series is a game changer for high-end residential projects."</p>
+                    <h5 style="margin: 0; font-weight: 800;">Sarah Chen</h5>
+                    <span style="font-size: 0.8rem; color: var(--gray-600); font-weight: 600;">Interior Designer, Vancouver</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: FAQ -->
+    <section class="section-padding" id="faq">
+        <div class="container" style="max-width: 900px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="tag">Technical Q&A</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-box active">
+                    <h4>What is the benefit of the 220mm louver?</h4>
+                    <div class="faq-content">
+                        <p>The 220mm "Aerofoil" louver is wider and stronger than standard residential models. It allows for longer spans between beams (up to 6m) and provides a more dramatic, architectural look while optimizing airflow and light control.</p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <h4>Is the system fully automated?</h4>
+                    <div class="faq-content">
+                        <p>Yes. Every BRE-220 comes standard with a synchronized motorized drive system. You can control the roof via remote control, smartphone app, or integrate it with weather sensors for fully autonomous operation.</p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <h4>Can I install this myself?</h4>
+                    <div class="faq-content">
+                        <p>While the BRE-220 is designed for professional results, it uses a modular assembly logic. For individuals with advanced DIY skills and proper equipment, it is possible, but we generally recommend a professional 2-person team for optimal results.</p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <h4>Can I customize the size for my specific project?</h4>
+                    <div class="faq-content">
+                        <p>Absolutely. While we offer standard modules, the BRE-220 is specifically engineered for custom architectural integration. We can customize the dimensions to the nearest millimeter to ensure a perfect fit for your specific terrace or commercial space.</p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <h4>How is the product shipped and what is the lead time?</h4>
+                    <div class="faq-content">
+                        <p>We ship globally using reinforced, sea-worthy wooden crate packaging to prevent any transit damage. The typical production lead time is 20-30 days. We provide comprehensive logistics support, including door-to-door delivery and customs handling for most regions.</p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <h4>What kind of after-sales support and warranty do you provide?</h4>
+                    <div class="faq-content">
+                        <p>The BRE-220 is backed by our industry-leading 20-year structural warranty and a 15-year finish warranty. Furthermore, we provide lifetime technical support. Every unit's specifications are archived, allowing us to ship precise replacement parts or compatible accessories at any time in the future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="section-padding bg-dark" style="text-align: center; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://sc01.alicdn.com/kf/Hce41c28123434d3ca110ccd9d56b7dc4s.jpg'); background-size: cover;">
+        <div class="container">
+            <h2 style="color: white; font-size: 3rem; margin-bottom: 20px;">Ready for Your Design?</h2>
+            <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 50px; max-width: 700px; margin: 0 auto 50px;">Consult with our lead engineers for a custom layout plan and technical drawing within 24 hours.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn-pdp btn-pdp-primary" style="text-decoration: none;">REQUEST QUOTE</a>
+                <a href="https://wa.me/8617812581015" class="btn-pdp" style="background: white; color: var(--dark); text-decoration: none;">CONTACT VIA WHATSAPP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="f-grid">
+                <div>
+                    <div class="f-logo">
+                        <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="BREALU Footer Logo">
+                    </div>
+                    <p style="color:rgba(255,255,255,0.5); max-width:300px;">Breathe · Relax · Embrace. <br>Global Leader in Premium DIY Pergola Kits serving 150+ countries across Europe, North America, Oceania, and the Middle East.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px;">Pergola-Serie</h4>
+                    <ul style="list-style: none; color: #9ca3af; line-height: 2;">
+                        <li><a href="pergola-bre-140u.html" style="color: inherit; text-decoration: none;">BRE-140U</a></li>
+                        <li><a href="pergola-bre-175u.html" style="color: inherit; text-decoration: none;">BRE-175U</a></li>
+                        <li><a href="pergola-bre-220.html" style="color: inherit; text-decoration: none;">BRE-220</a></li>
+                        <li><a href="pergola-bre-r230.html" style="color: inherit; text-decoration: none;">BRE-R230</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px;">Außenküche</h4>
+                    <ul style="list-style: none; color: #9ca3af; line-height: 2;">
+                        <li><a href="bre-lite.html" style="color: inherit; text-decoration: none;">BRE-Lite</a></li>
+                        <li><a href="bre-lux.html" style="color: inherit; text-decoration: none;">BRE-Lux</a></li>
+                        <li><a href="bre-ultra.html" style="color: inherit; text-decoration: none;">BRE-Ultra</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 25px;">Resources</h4>
+                    <ul style="list-style: none; color: #9ca3af; line-height: 2;">
+                        <li><a href="projects.html" style="color: inherit; text-decoration: none;">Weltweite Referenzprojekte</a></li>
+                        <li><a href="news.html" style="color: inherit; text-decoration: none;">Aktuelles & Technik</a></li>
+                        <li><a href="reviews.html" style="color: inherit; text-decoration: none;">Kundenbewertungen</a></li>
+                        <li><a href="contact.html" style="color: inherit; text-decoration: none;">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f-bottom" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; margin-top: 40px; color: #888; font-size: 0.9rem;">
+                <p>&copy; 2026 Brealu Outdoor Group. All Rights Reserved. Built with Accio Work.</p>
+                <div style="display:flex; gap:20px;">
+                    <a href="#" style="color: inherit; text-decoration: none;">Datenschutzrichtlinie</a>
+                    <a href="#" style="color: inherit; text-decoration: none;">Nutzungsbedingungen</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery Switcher
+        const thumbs = document.querySelectorAll('.thumb-item');
+        const mainImg = document.getElementById('mainImg');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                mainImg.src = thumb.querySelector('img').src;
+                thumbs.forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-box h4').forEach(header => {
+            header.addEventListener('click', () => {
+                const box = header.parentElement;
+                const wasActive = box.classList.contains('active');
+                document.querySelectorAll('.faq-box').forEach(b => b.classList.remove('active'));
+                if (!wasActive) box.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

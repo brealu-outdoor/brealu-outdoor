@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/thank-you.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/thank-you.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/thank-you.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/thank-you.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Brealu Outdoor</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --secondary: #00A651;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        
+        header { background-color: white; padding: 20px 0; border-bottom: 1px solid #eee; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo img { height: 40px; }
+
+        .thank-you-section { padding: 180px 0 100px; text-align: center; }
+        .success-icon { font-size: 80px; color: var(--secondary); margin-bottom: 30px; }
+        h1 { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+        .subtitle { font-size: 1.25rem; color: var(--gray); max-width: 700px; margin: 0 auto 50px; }
+
+        .download-card { 
+            background: var(--light); 
+            padding: 60px; 
+            border-radius: 24px; 
+            max-width: 800px; 
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: center;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--primary);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0, 74, 153, 0.2); background: #003a7a; }
+
+        .next-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 60px; }
+        .step-card { padding: 30px; border: 1px solid #eee; border-radius: 16px; transition: var(--transition); text-decoration: none; color: inherit; }
+        .step-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .step-card i { font-size: 24px; color: var(--primary); margin-bottom: 20px; display: block; }
+        .step-card h4 { margin-bottom: 10px; }
+        .step-card p { font-size: 0.9rem; }
+
+        footer { background: var(--dark); color: white; padding: 80px 0 40px; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; margin-bottom: 60px; }
+        .footer-logo img { height: 40px; margin-bottom: 20px; }
+        .footer-links h4 { color: white; margin-bottom: 24px; font-size: 1.1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--secondary); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; display: flex; justify-content: space-between; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+    
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; }
+        @media (max-width: 1200px) {
+            .nav-links { gap: 10px !important; }
+            .nav-links a { font-size: 0.8rem !important; }
+        }
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="nav-flex">
+                <a href="index.html" class="nav-logo">
+                    <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo">
+                </a>
+                <div style="font-weight: 600; color: var(--primary);">Breathe · Relax · Embrace.</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="thank-you-section">
+        <div class="container">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h1>Inquiry Received Successfully</h1>
+            <p class="subtitle">Our senior engineering team has been notified. We will review your project specifications and respond with a technical assessment <strong>within 3 hours</strong>.</p>
+
+            <div class="download-card">
+                <img src="https://sc01.alicdn.com/kf/H152afc5e7c5d4fad99d09552465514f7r.jpg" alt="Brealu 2026 Catalog" style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <div>
+                    <span class="tag" style="background: var(--secondary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Instant Access</span>
+                    <h2 style="margin: 15px 0 10px; color: var(--primary);">2026 Architectural Catalog</h2>
+                    <p style="margin-bottom: 30px; font-size: 1rem;">Get full technical specifications, RAL color options, and structural data for our entire Pergola & Kitchen collection.</p>
+                    <a href="https://brealu-official.oss-eu-central-1.aliyuncs.com/BREALU%20Outdoor%20Sunshade%20Products%20Catalog%202026.pdf" class="btn-download" target="_blank">
+                        <i class="fas fa-file-pdf"></i> DOWNLOAD CATALOG (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 40px; color: var(--primary);">Explore While You Wait</h3>
+            <div class="next-steps">
+                <a href="projects.html" class="step-card">
+                    <i class="fas fa-images"></i>
+                    <h4>Global Projects</h4>
+                    <p>Browse our international case studies and architectural implementations.</p>
+                </a>
+                <a href="news.html" class="step-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Technical Insights</h4>
+                    <p>Deep dives into aluminum engineering, LED systems, and smart automation.</p>
+                </a>
+                <a href="reviews.html" class="step-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Client Success</h4>
+                    <p>Read detailed reviews from architects and premium homeowners worldwide.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo">
+                    </div>
+                    <p style="color:#00A651; font-weight:700; margin-bottom:12px;">Breathe · Relax · Embrace.</p>
+                    <p style="color:rgba(255,255,255,0.4); font-size: 0.9rem;">The Architectural Standard for Premium Outdoor Living. Precision engineering delivered worldwide since 1995.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pergola Series</h4>
+                    <ul>
+                        <li><a href="pergola-bre-r230.html">BRE-R230 Flagship</a></li>
+                        <li><a href="pergola-bre-220.html">BRE-220 Heavy Duty</a></li>
+                        <li><a href="pergola-bre-175u.html">BRE-175U Elite</a></li>
+                        <li><a href="pergola-bre-140u.html">BRE-140U DIY Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Outdoor Kitchen</h4>
+                    <ul>
+                        <li><a href="bre-lite.html">BRE-Lite Station</a></li>
+                        <li><a href="bre-lux.html">BRE-Lux Hub</a></li>
+                        <li><a href="bre-ultra.html">BRE-Ultra Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="projects.html">Global Case Studies</a></li>
+                        <li><a href="story.html">Our Story</a></li>
+                        <li><a href="news.html">News & Technical</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brealu Outdoor. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

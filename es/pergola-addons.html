@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergola Optional Add-ons | Modular Lifestyle Ecosystem - Brealu Outdoor</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #004A99;
+            --secondary: #00A651;
+            --accent: #FF6B00;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --white: #FFFFFF;
+            --border: rgba(15, 23, 42, 0.08);
+            --transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background: white; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+        .section-padding { padding: 100px 0; }
+        
+        /* Typography */
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--dark); line-height: 1.2; }
+        h2 { font-size: 2.8rem; font-weight: 800; margin-bottom: 25px; }
+        p { color: var(--gray); }
+        .tag { display: inline-block; background: rgba(0,74,153,0.1); color: var(--primary); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+
+        /* --- Header & Navigation --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 0.875rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        .top-bar-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left, .top-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .top-bar-left a {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+        }
+
+        .top-bar-right a {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            position: fixed;
+            top: 40px;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 44px;
+        }
+
+        .nav-item { position: relative; display: flex; align-items: center; }
+        .nav-item:hover .dropdown { display: block; animation: navFade 0.3s ease forwards; }
+        
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            min-width: 250px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 15px 0;
+            display: none;
+            z-index: 1002;
+            border: 1px solid #F1F5F9;
+        }
+
+        .dropdown a {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            display: block;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .dropdown a:hover { background: var(--light); color: var(--primary); padding-left: 30px; }
+
+        @keyframes navFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 100px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 74, 153, 0.2);
+        }
+
+        /* --- Breadcrumb --- */
+        .breadcrumb { padding: 20px 0; font-size: 0.85rem; color: var(--gray); border-bottom: 1px solid #f0f0f0; margin-bottom: 40px; }
+        .breadcrumb a { color: var(--gray); text-decoration: none; font-weight: 600; }
+        .breadcrumb span { margin: 0 10px; opacity: 0.5; }
+
+        /* --- Hero Optimized for Labelled Image --- */
+        .hero-section { position: relative; border-radius: 24px; overflow: hidden; margin-bottom: 80px; aspect-ratio: 16/9; display: flex; align-items: flex-end; justify-content: flex-end; background: #000; padding: 50px; }
+        .hero-section img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .hero-section::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 40%); z-index: 2; }
+        .hero-overlay { position: relative; z-index: 3; padding: 40px; max-width: 500px; color: white; background: rgba(0, 31, 63, 0.6); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .hero-overlay h1 { color: white; font-size: 2.5rem; font-weight: 300; margin-bottom: 15px; line-height: 1.1; }
+        .hero-overlay h1 strong { font-weight: 800; display: block; }
+        .hero-overlay p { color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 25px; line-height: 1.5; }
+
+        /* --- Accessory Grid --- */
+        .addon-category { margin-bottom: 120px; }
+        .addon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 30px; margin-top: 40px; }
+        .addon-card { border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: var(--transition); }
+        .addon-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .card-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+        .card-body { padding: 30px; }
+        .card-body h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .card-body p { font-size: 0.95rem; margin-bottom: 20px; }
+        .feature-list { list-style: none; margin-bottom: 25px; }
+        .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--dark); }
+        .feature-list li i { color: var(--primary); font-size: 0.8rem; }
+
+        /* --- CTA --- */
+        .btn-cta { display: inline-block; background: var(--primary); color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: var(--transition); }
+        .btn-cta:hover { background: var(--dark); }
+
+        /* --- Technical Matrix --- */
+        .matrix-section { background: var(--light); border-radius: 30px; padding: 80px 60px; margin-bottom: 120px; }
+        .matrix-header { text-align: center; margin-bottom: 60px; }
+        .matrix-table { width: 100%; border-collapse: collapse; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .matrix-table th { background: var(--primary); color: white; padding: 25px; text-align: left; font-family: 'Outfit'; font-size: 1.1rem; }
+        .matrix-table td { padding: 20px 25px; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem; }
+        .matrix-table tr:last-child td { border: none; }
+        .check { color: var(--primary); font-weight: 800; }
+
+        /* Final CTA */
+        .final-cta { background: var(--dark); border-radius: 30px; padding: 80px; text-align: center; color: white; }
+        .final-cta h2 { color: white; font-size: 3rem; margin-bottom: 20px; }
+        .final-cta p { color: rgba(255,255,255,0.7); margin-bottom: 40px; }
+        .btn-accent { display: inline-block; background: var(--accent); color: white; padding: 18px 45px; border-radius: 10px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 20px rgba(255,102,0,0.3); }
+
+        /* --- Footer --- */
+        footer { background: var(--dark); color: white; padding: 100px 0 60px; margin-top: 100px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 60px; }
+        .footer-logo img { height: 44px; margin-bottom: 24px; }
+        .footer-links h4 { color: white; margin-bottom: 32px; font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 800; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 16px; }
+        .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; transition: var(--transition); font-size: 0.95rem; }
+        .footer-links a:hover { color: white; padding-left: 5px; }
+        .footer-social { display: flex; gap: 20px; margin-top: 32px; }
+        .footer-social a { color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: var(--transition); }
+        .footer-social a:hover { color: white; transform: translateY(-3px); }
+        .footer-bottom { margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; font-size: 0.85rem; color: rgba(255,255,255,0.3); }
+
+        @media (max-width: 992px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .hero-section { aspect-ratio: 16/9; }
+            .hero-overlay h1 { font-size: 2.8rem; }
+        }
+    
+        
+        /* Language Switcher & Nav Optimization */
+        .lang-switcher { margin-left: 15px; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 15px; }
+        .lang-btn { display: flex !important; align-items: center !important; gap: 6px !important; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; position: relative; }
+        .nav-links .dropdown { top: 100% !important; }
+        @media (max-width: 1350px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+            .nav-logo img { height: 36px !important; }
+            .btn-primary { padding: 8px 16px !important; font-size: 0.9rem !important; }
+        }
+        
+        .lang-btn { display: flex; align-items: center; gap: 6px; color: var(--primary) !important; font-weight: 700 !important; }
+        .nav-links { gap: 20px !important; display: flex !important; align-items: center !important; }
+        .nav-item { white-space: nowrap; }
+        @media (max-width: 1280px) {
+            .nav-links { gap: 12px !important; }
+            .nav-links a { font-size: 0.85rem !important; }
+        }
+        
+    </style>
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/pergola-addons.html">
+    <link rel="alternate" hreflang="fr" href="https://www.brealuoutdoor.com/fr/pergola-addons.html">
+    <link rel="alternate" hreflang="de" href="https://www.brealuoutdoor.com/de/pergola-addons.html">
+    <link rel="alternate" hreflang="es" href="https://www.brealuoutdoor.com/es/pergola-addons.html">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="top-bar-left">
+                <a href="https://www.facebook.com/profile.php?id=61578037276267" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/brealupergola/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@OUTDOORPERGOLA" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/99217631/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="top-bar-right">
+                <a href="contact.html"><i class="fas fa-envelope"></i> info@brealuoutdoor.com</a>
+                <a href="tel:+8617812581015"><i class="fas fa-phone"></i> +86 178 1258 1015</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="nav-logo">
+                <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Outdoor">
+            </a>
+            <nav class="nav-links">
+                <div class="nav-item"><a href="index.html">Inicio</a></div>
+                <div class="nav-item">
+                    <a href="pergola-v3-alunotec.html">Pgolas <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:4px;"></i></a>
+                    <div class="dropdown">
+                        <a href="pergola-bre-140u.html">BRE-140U</a>
+                        <a href="pergola-bre-175u.html">BRE-175U</a>
+                        <a href="pergola-bre-220.html">BRE-220</a>
+                        <a href="pergola-bre-r230.html">BRE-R230</a>
+
+                        <a href="pergola-comparison.html">Comparaci de Modelos</a>
+                        <a href="pergola-addons.html">Accesorios Opcionales para Pgolas</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="outdoor-kitchen-v3-alunotec.html">Cocinas de Exterior <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:4px;"></i></a>
+                    <div class="dropdown">
+                        <a href="bre-lite.html">BRE-Lite</a>
+                        <a href="bre-lux.html">BRE-Lux</a>
+                        <a href="bre-ultra.html">BRE-Ultra</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="projects.html">Proyectos</a></div>
+                <div class="nav-item"><a href="story.html">Nuestra Historia</a></div>
+                <div class="nav-item"><a href="news.html">Noticias</a></div>
+                <div class="nav-item"><a href="reviews.html">Opiniones</a></div>
+                <div class="nav-item"><a href="contact.html">Contヽtenos</a></div><div class="nav-item"><a href="#"><i class="fas fa-globe"></i> EN <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:4px;"></i></a><div class="dropdown"><a href="index.html">English</a><a href="fr/index.html">Franais</a><a href="de/index.html">Deutsch</a><a href="es/index.html">Espaol</a></div></div>
+            </nav>
+            <a href="contact.html" class="btn-primary">Iniciar Dise</a>
+        </div>
+    </header>
+
+    <div class="container" style="padding-top: 140px;">
+        <nav class="breadcrumb">
+            <a href="index.html">Inicio</a><span>/</span>
+            <a href="pergola-v3-alunotec.html">Pgola</a><span>/</span>
+            <span>Optional Add-ons</span>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <img src="https://sc01.alicdn.com/kf/Hce187ea5bf08466197316210390613d4I.jpg" alt="Brealu Pergola Accessories">
+            <div class="hero-overlay">
+                <span class="tag" style="background: var(--accent); color: white; border:none; padding: 4px 12px; font-size: 0.65rem; margin-bottom: 10px;">BREALU ECOSYSTEM</span>
+                <h1>Elevate <strong>Your Sanctuary</strong></h1>
+                <p>Discover our modular add-on system: from integrated LEDs to motorized zip screens and infrared heating.</p>
+                <a href="#zip-screen" class="btn-accent" style="padding: 12px 30px; border-radius: 4px; font-size: 0.8rem; letter-spacing: 1.5px; width: 100%; text-align: center;">EXPLORE OPTIONS</a>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        /* New Section Styles */
+        .feature-section { padding: 120px 0; border-bottom: 1px solid #f0f0f0; }
+        .feature-row { display: flex; align-items: center; gap: 80px; }
+        .feature-row.reverse { flex-direction: row-reverse; }
+        .feature-img { flex: 1.2; border-radius: 30px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1); line-height: 0; }
+        .feature-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .feature-img:hover img { transform: scale(1.05); }
+        .feature-text { flex: 1; }
+        .feature-text h2 { font-size: 2.8rem; margin-bottom: 25px; line-height: 1.1; }
+        .feature-text p { font-size: 1.1rem; color: #64748b; margin-bottom: 30px; }
+        .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+        .spec-item { display: flex; align-items: center; gap: 12px; font-size: 0.85rem; font-weight: 700; color: var(--dark); }
+        .spec-item i { color: var(--primary); width: 20px; text-align: center; }
+        
+        @media (max-width: 992px) {
+            .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; }
+            .feature-section { padding: 80px 0; }
+            .feature-text h2 { font-size: 2.2rem; }
+        }
+    </style>
+
+    <div class="container">
+        <!-- Breadcrumb & Hero already exist... -->
+
+        <!-- Section 1: Motorized Zip Screen -->
+        <section id="zip-screen" class="feature-section">
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/H4a0ef29394394ba4a7d2e29f18e7e22dJ.jpg" alt="Motorized Zip Screen">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Shielding</span>
+                    <h2>Motorized <br><strong>Zip Screen</strong></h2>
+                    <p>The ultimate hurricane-rated vertical screen. Our unique zip-lock system ensures the fabric remains taut even in heavy winds, providing complete protection from wind, rain, and insects.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-wind"></i> Grade 10 Windproof</div>
+                        <div class="spec-item"><i class="fas fa-bug"></i> 100% Insect Proof</div>
+                        <div class="spec-item"><i class="fas fa-sun"></i> UV Reflection</div>
+                        <div class="spec-item"><i class="fas fa-mobile-alt"></i> Remote & App Control</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">GET A QUOTE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Sheer Curtain -->
+        <section id="sheer-curtain" class="feature-section">
+            <div class="feature-row reverse">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/Hf5e658f4e80d456f87ca4d5d43bf9655B.jpg" alt="Luxury Sheer Curtain">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Ambiance</span>
+                    <h2>Luxury <br><strong>Sheer Curtain</strong></h2>
+                    <p>Add a touch of softness and romance to your architectural structure. Our outdoor-rated sheer curtains provide gentle privacy and elegant light diffusion for high-end residential projects.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-tint-slash"></i> Mildew Resistant</div>
+                        <div class="spec-item"><i class="fas fa-leaf"></i> Breathable Fabric</div>
+                        <div class="spec-item"><i class="fas fa-eye-slash"></i> Soft Privacy</div>
+                        <div class="spec-item"><i class="fas fa-palette"></i> Custom Acabadoes</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">ENQUIRE COLORS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Glass Door System -->
+        <section id="glass-door" class="feature-section">
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/Hf3cba5a3a42949faac7a93100e7081eeA.jpg" alt="Glass Door System">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Architecture</span>
+                    <h2><strong>Glass Door System</strong></h2>
+                    <p>Transform your pergola into a four-season glass room. Our 10-12mm tempered glass panels slide effortlessly, offering a panoramic view with zero visual obstruction.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-expand"></i> Panoramic View</div>
+                        <div class="spec-item"><i class="fas fa-shield-alt"></i> Tempered Safety</div>
+                        <div class="spec-item"><i class="fas fa-thermometer-half"></i> Thermal Barrier</div>
+                        <div class="spec-item"><i class="fas fa-lock"></i> Secured Locking</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">DESIGN PROPOSAL</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Aluminum Shutter -->
+        <section id="shutter" class="feature-section">
+            <div class="feature-row reverse">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/H0cf282a7fdb14ef3857a68def352655cF.jpg" alt="Aluminum Shutter">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Functional</span>
+                    <h2>Aluminum <br><strong>Louvered Shutter</strong></h2>
+                    <p>Architectural louvers that balance airflow and privacy. Available in sliding or bi-folding configurations, these shutters provide a permanent, robust enclosure for estates.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-sliders-h"></i> Adjustable Blades</div>
+                        <div class="spec-item"><i class="fas fa-shield-virus"></i> AkzoNobel Acabado</div>
+                        <div class="spec-item"><i class="fas fa-door-open"></i> Bi-Fold/Sliding</div>
+                        <div class="spec-item"><i class="fas fa-hammer"></i> 6063-T5 Alloy</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">VIEW CONFIGS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Fixed Aluminium Screen -->
+        <section id="fixed-screen" class="feature-section">
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/H94b1f736dfab4d9993c047bd862c9cd2j.jpg" alt="Fixed Aluminium Screen">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Privacy</span>
+                    <h2>Fixed <br><strong>Aluminium Screen</strong></h2>
+                    <p>Crafted from high-quality aluminum alloy, this horizontal/vertical screen system offers exceptional durability and strength. Its lightweight, corrosion-resistant design ensures a lifetime of refinement without deformation.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-shield-alt"></i> High Strength Alloy</div>
+                        <div class="spec-item"><i class="fas fa-tint-slash"></i> Corrosion Proof</div>
+                        <div class="spec-item"><i class="fas fa-gem"></i> Refined Elegance</div>
+                        <div class="spec-item"><i class="fas fa-check-circle"></i> Anti-Deformation</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">GET A QUOTE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Perforated Screen -->
+        <section id="perforated" class="feature-section">
+            <div class="feature-row reverse">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/H0b15f27185c944d5af31f9ce8ff6db94i.jpg" alt="Perforated Screen">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Artistic Decoration</span>
+                    <h2>Aluminium <br><strong>Perforated Screen</strong></h2>
+                    <p>Designed for both partial shading and refined side decoration. Compared to ordinary metal plates, our hollow aluminum panels are lighter, stronger, and specifically crafted to complement the modern aesthetics of your louvered pergola.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-magic"></i> Artistic Shading</div>
+                        <div class="spec-item"><i class="fas fa-layer-group"></i> Lighter & Stronger</div>
+                        <div class="spec-item"><i class="fas fa-shapes"></i> Customized Patterns</div>
+                        <div class="spec-item"><i class="fas fa-gem"></i> Premium Side Decor</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">REQUEST CUSTOM DESIGN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Operable Blades Screen -->
+        <section id="operable-blades" class="feature-section">
+            <div class="feature-row">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/H571d029f2cb44147b8e6aba121f83bcbW.jpg" alt="Operable Blades Screen">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Smart Innovation</span>
+                    <h2>Aluminium <br><strong>Operable Blades</strong></h2>
+                    <p>Experience the convenience of modern smart life. Our operable blade screens feature a hidden electric control system that integrates with smart homes, offering wind and heat resistance with silent, smooth operation.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-microchip"></i> Smart App/Home Sync</div>
+                        <div class="spec-item"><i class="fas fa-tint"></i> Built-in Rubber Seals</div>
+                        <div class="spec-item"><i class="fas fa-volume-mute"></i> Silent Transmission</div>
+                        <div class="spec-item"><i class="fas fa-shield-alt"></i> Wind & Heat Proof</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">EXPLORE SMART OPTIONS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Aluminium Wall Panels -->
+        <section id="wall-panels" class="feature-section">
+            <div class="feature-row reverse">
+                <div class="feature-img">
+                    <img src="https://sc01.alicdn.com/kf/Hcd5cdb38ce914740bb85467279220052Y.jpg" alt="Aluminium Wall Panels">
+                </div>
+                <div class="feature-text">
+                    <span class="tag">Structural Privacy</span>
+                    <h2>Aluminium <br><strong>Wall Panels</strong></h2>
+                    <p>Experience superior structural aesthetics with our high-strength 3D wall panels. Available in vertical or horizontal styles, these eco-friendly aluminum panels offer absolute privacy and stability for storage, garage enclosures, or architectural boundaries.</p>
+                    <div class="spec-grid">
+                        <div class="spec-item"><i class="fas fa-cube"></i> 3D Concave-Convex Design</div>
+                        <div class="spec-item"><i class="fas fa-volume-up"></i> Sound & Heat Insulation</div>
+                        <div class="spec-item"><i class="fas fa-shield-alt"></i> High Impact Resistance</div>
+                        <div class="spec-item"><i class="fas fa-umbrella"></i> Moisture & Corrosion Proof</div>
+                    </div>
+                    <a href="contact.html" class="btn-cta">DESIGN GUIDE</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Section 9: Ambiance & Comfort (3-Column Grid) -->
+        <section id="comfort" class="feature-section" style="background: var(--light); border-radius: 40px; margin: 40px 0;">
+            <div class="container" style="padding: 80px 40px;">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <span class="tag">Ambiance & Comfort</span>
+                    <h2>Intelligent <strong>Outdoor Control</strong></h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Beyond the structure. Control the light, the temperature, and the breeze with our fully integrated electrical ecosystem.</p>
+                </div>
+                
+                <div class="addon-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+                    <!-- LED Lighting -->
+                    <div class="addon-card" style="background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                        <img src="https://sc01.alicdn.com/kf/H616d1e4ddcd9403994b8788ee32fb300n.jpg" class="card-img" alt="Integrated LED">
+                        <div class="card-body">
+                            <h3 style="font-size: 1.4rem;">Integrated <br>LED Lighting</h3>
+                            <p style="font-size: 0.85rem;">Precision-embedded warm white or RGBW lighting in gutters and louvers for nocturnal elegance.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Stepless Dimming</li>
+                                <li><i class="fas fa-check"></i> 50,000h Lifespan</li>
+                                <li><i class="fas fa-check"></i> IP67 Waterproof</li>
+                            </ul>
+                            <a href="contact.html" class="btn-cta" style="width: 100%; text-align: center;">ENQUIRE</a>
+                        </div>
+                    </div>
+
+                    <!-- Infrared Heater -->
+                    <div class="addon-card" style="background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                        <img src="https://sc01.alicdn.com/kf/Hdb476f6960dc4f549be7fdab0397ef0dM.jpg" class="card-img" alt="Infrared Heater">
+                        <div class="card-body">
+                            <h3 style="font-size: 1.4rem;">Infrared <br>Heating System</h3>
+                            <p style="font-size: 0.85rem;">Instant warmth via high-efficiency far-infrared technology, perfect for autumn and winter evenings.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Instant Heat</li>
+                                <li><i class="fas fa-check"></i> Anti-Glare Gold Tube</li>
+                                <li><i class="fas fa-check"></i> Remote Control</li>
+                            </ul>
+                            <a href="contact.html" class="btn-cta" style="width: 100%; text-align: center;">ENQUIRE</a>
+                        </div>
+                    </div>
+
+                    <!-- All-Weather Fan -->
+                    <div class="addon-card" style="background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                        <img src="https://sc01.alicdn.com/kf/H755d3877764d4715bb7746f2904947bcM.jpg" class="card-img" alt="Outdoor Fan">
+                        <div class="card-body">
+                            <h3 style="font-size: 1.4rem;">Cooling Fan <br>& Light Combo</h3>
+                            <p style="font-size: 0.85rem;">Powerful airflow and secondary illumination in one sleek unit, designed for humid outdoor environments.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i> Silent DC Motor</li>
+                                <li><i class="fas fa-check"></i> Integrated LED Panel</li>
+                                <li><i class="fas fa-check"></i> Corrosive-Resistant</li>
+                            </ul>
+                            <a href="contact.html" class="btn-cta" style="width: 100%; text-align: center;">ENQUIRE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Final CTA -->
+        <div class="final-cta">
+            <h2>Design Your Ecosystem</h2>
+            <p>Every Brealu pergola is a canvas. Let our engineers help you configure the perfect accessory package for your climate.</p>
+            <a href="contact.html" class="btn-accent">GET A CUSTOM DESIGN PROPOSAL</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <img src="https://sc01.alicdn.com/kf/A57d8a51a0009466490d9befb83ca1f09J.png" alt="Brealu Logo">
+                    </div>
+                    <p style="color:#00A651; font-weight:700; margin-bottom:12px;">Respire · Relájese · Disfrute.</p>
+                    <p style="color:rgba(255,255,255,0.4); font-size: 0.9rem;">The Architectural Standard for Premium Outdoor Living. Ingenier de Precisi delivered worldwide since 1995.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61578037276267" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/brealupergola/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@OUTDOORPERGOLA" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/99217631/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Serie de Pgolas</h4>
+                    <ul>
+                        <li><a href="pergola-bre-r230.html">BRE-R230 Flagship</a></li>
+                        <li><a href="pergola-bre-220.html">BRE-220 Heavy Duty</a></li>
+                        <li><a href="pergola-bre-175u.html">BRE-175U Elite</a></li>
+                        <li><a href="pergola-bre-140u.html">BRE-140U DIY Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Cocina de Exterior</h4>
+                    <ul>
+                        <li><a href="bre-lite.html">BRE-Lite Station</a></li>
+                        <li><a href="bre-lux.html">BRE-Lux Hub</a></li>
+                        <li><a href="bre-ultra.html">BRE-Ultra Suite</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces R﹑idos</h4>
+                    <ul>
+                        <li><a href="projects.html">Casos de ito Globales</a></li>
+                        <li><a href="story.html">Nuestra Historia</a></li>
+                        <li><a href="news.html">Noticias y Tnica</a></li>
+                        <li><a href="reviews.html">Client Opiniones</a></li>
+                        <li><a href="contact.html">Contヽtenos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brealu Outdoor. Todos los derechos reservados.</p>
+                <div style="display:flex; gap:24px;">
+                    <a href="#" style="color:inherit; text-decoration:none;">Polica de Privacidad</a>
+                    <a href="#" style="color:inherit; text-decoration:none;">Tminos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
