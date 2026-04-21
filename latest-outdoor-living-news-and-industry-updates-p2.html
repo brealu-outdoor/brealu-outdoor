@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/contact.html">
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/latest-outdoor-living-news-and-industry-updates-p2.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Brealu Outdoor - Premium Architectural Solutions</title>
-    <meta name="description" content="Get in touch with Brealu Outdoor. Professional consultation for premium aluminum pergola systems and modular outdoor kitchens. Worldwide shipping since 1995.">
+    <title>News & Insights - Page 2 | Brealu Outdoor</title>
+    <meta name="description" content="Stay updated with Brealu Outdoor. Industry trends and corporate milestones from 1995 to 2022.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,64 +130,96 @@
 
         @keyframes navFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .btn-primary {
-            background: var(--primary);
-            color: white !important;
-            padding: 12px 28px;
-            border-radius: 100px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 74, 153, 0.2);
-        }
-
         /* --- Hero Section --- */
-        .contact-hero { 
-            padding: 240px 0 100px; 
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('https://sc02.alicdn.com/kf/Acd1c97bd11a64f72a44b146601625fec0.png');
+        .news-hero { 
+            padding-top: 240px; 
+            padding-bottom: 80px; 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('https://sc01.alicdn.com/kf/H2b4c22acf58e4945855f581d7248dfd2s.jpg');
             background-size: cover;
-            background-position: center top;
-            text-align: center; 
+            background-position: center;
+            text-align: center;
             color: white;
         }
-        .contact-hero h1 { font-family: 'Outfit', sans-serif; font-size: 4.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 24px; color: white; }
-        .contact-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto; }
+        .news-hero h1 { font-family: 'Outfit', sans-serif; font-size: 4rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -2px; color: white; }
+        .news-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto; }
 
-        /* --- Contact Content --- */
-        .section { padding: 120px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
-        
-        /* Info Side */
-        .contact-info h2 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; margin-bottom: 32px; }
-        .info-item { display: flex; gap: 24px; margin-bottom: 40px; }
-        .info-icon { width: 64px; height: 64px; background: rgba(0, 74, 153, 0.05); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem; flex-shrink: 0; }
-        .info-content h3 { font-size: 1.1rem; margin-bottom: 8px; }
-        .info-content p { color: var(--gray); font-size: 1rem; }
-        .social-links { display: flex; gap: 16px; margin-top: 20px; }
-        .social-btn { width: 48px; height: 48px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--dark); transition: var(--transition); text-decoration: none; }
-        .social-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+        /* --- News Grid --- */
+        .section { padding: 80px 0 120px; }
+        .news-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 40px; 
+        }
+        .news-card { 
+            background: white; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
+            border-color: var(--primary);
+        }
+        .news-img { 
+            height: 240px; 
+            background-size: cover; 
+            background-position: center top; 
+            position: relative;
+        }
+        .news-tag { 
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            padding: 6px 14px; 
+            background: var(--primary); 
+            color: white; 
+            border-radius: 8px; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            text-transform: uppercase;
+        }
+        .news-body { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-date { font-size: 0.85rem; color: var(--gray); margin-bottom: 12px; font-weight: 500; }
+        .news-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: var(--dark); margin-bottom: 16px; line-height: 1.3; }
+        .news-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
+        .read-more { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            color: var(--primary); 
+            font-weight: 700; 
+            text-decoration: none; 
+            font-size: 0.95rem;
+        }
+        .read-more i { transition: var(--transition); }
+        .read-more:hover i { transform: translateX(5px); }
 
-        /* Form Side */
-        .contact-form-box { background: white; padding: 60px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 40px 80px rgba(15, 23, 42, 0.05); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .form-group { margin-bottom: 24px; }
-        .full-width { grid-column: span 2; }
-        label { display: block; font-weight: 700; margin-bottom: 10px; font-size: 0.9rem; color: var(--dark); }
-        input, select, textarea { width: 100%; padding: 16px; border: 1px solid var(--border); border-radius: 12px; font-family: 'Inter', sans-serif; font-size: 1rem; transition: var(--transition); background: var(--light); }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(0, 74, 153, 0.05); }
-        .submit-btn { width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 800; font-size: 1.1rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 12px; }
-        .submit-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 74, 153, 0.2); }
-
-        /* --- Global Network Map --- */
-        .network-section { background: var(--dark); padding: 120px 0; color: white; text-align: center; }
-        .network-section h2 { font-family: 'Outfit', sans-serif; font-size: 3rem; margin-bottom: 24px; }
-        .network-map { width: 100%; max-width: 1000px; margin: 60px auto 0; border-radius: 24px; }
+        /* --- Pagination --- */
+        .pagination { 
+            margin-top: 60px; 
+            display: flex; 
+            justify-content: center; 
+            gap: 12px; 
+        }
+        .page-btn { 
+            width: 48px; 
+            height: 48px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            color: var(--dark); 
+            font-weight: 600; 
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .page-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary); }
 
         /* --- Footer --- */
         footer { background: var(--dark); color: white; padding: 100px 0 60px; }
@@ -206,8 +238,12 @@
         @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } }
 
         @media (max-width: 1024px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 3rem; }
+            .news-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .news-grid { grid-template-columns: 1fr; }
+            .news-hero h1 { font-size: 2.5rem; }
         }
     
         
@@ -280,137 +316,116 @@
                 </div>
                 <div class="nav-item"><a href="outdoor-pergola-projects-gallery.html">Projects</a></div>
                 <div class="nav-item"><a href="brealu-outdoor-manufacturer-story.html">Our Story</a></div>
-                <div class="nav-item"><a href="latest-pergola-industry-news-and-design-insights.html">News</a></div>
+                <div class="nav-item"><a href="latest-pergola-industry-news-and-design-insights.html" style="color:var(--primary)">News</a></div>
                 <div class="nav-item"><a href="reviews.html">Reviews</a></div>
-                <div class="nav-item"><a href="contact.html" style="color:var(--primary)">Contact Us</a></div>
-            
+                
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
                 
             </nav>
-            <a href="contact.html" class="btn-primary" style="padding: 10px 24px; color: white;">Start Design</a>
+            <a href="contact.html" class="btn btn-primary" style="padding: 10px 24px; color: white;">Start Design</a>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="contact-hero">
+    <!-- Hero Section -->
+    <section class="news-hero">
         <div class="container">
-            <h1>Start Your Architectural Journey</h1>
-            <p>Whether you're an architect, developer, or homeowner, our engineering team is ready to provide the professional support your project deserves.</p>
+            <h1>News & Technical Insights</h1>
+            <p>Archive of our engineering milestones and global project historical breakthroughs.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- News Grid -->
     <section class="section">
         <div class="container">
-            <div class="contact-grid">
+            <!-- PAGE 2 -->
+            <div class="news-grid" id="news-page-2">
                 
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-phone"></i></div>
-                        <div class="info-content">
-                            <h3>Phone & WhatsApp</h3>
-                            <p>+86 178 1258 1015</p>
-                            <p>Direct Engineering Support Line</p>
-                        </div>
+                <!-- News 7: 2022 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H152afc5e7c5d4fad99d09552465514f7r.jpg');">
+                        <span class="news-tag">Product</span>
                     </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="info-content">
-                            <h3>Email Inquiry</h3>
-                            <p>boaz@brealuoutdoor.com</p>
-                            <p>Response within 24 hours</p>
-                        </div>
+                    <div class="news-body">
+                        <div class="news-date">October 11, 2022</div>
+                        <h3>BRE-R230 Retractable: The Future of Dynamic Shading</h3>
+                        <p>Introducing our flagship retractable system. How motorized precision redefined the panoramic sky opening experience.</p>
+                        <a href="new-motorized-retractable-pergola-r230-official-launch.html" class="read-more">Full Story <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </article>
 
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-location-dot"></i></div>
-                        <div class="info-content">
-                            <h3>Manufacturing Base</h3>
-                            <p>Foshan, Guangdong, China</p>
-                            <p>The global hub for precision aluminum engineering.</p>
-                        </div>
+                <!-- News 8: 2022 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H48909d12c9a14d1dabfdba8c166200bcv.png'); background-position: center 0%; height: 300px;">
+                        <span class="news-tag">Sustainability</span>
                     </div>
-
-                    <div class="social-links">
-                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <div class="news-body">
+                        <div class="news-date">December 04, 2022</div>
+                        <h3>Sustainable Engineering: The Recyclability of 6063 Aluminum</h3>
+                        <p>How Brealu is leading the green transition by utilizing 100% recyclable aluminum alloys in every architectural project.</p>
+                        <a href="eco-friendly-aluminum-pergola-sustainable-manufacturing.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="contact-form-box">
-                    <form>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" placeholder="john@company.com">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text" placeholder="+1 (555) 000-0000">
-                            </div>
-                            <div class="form-group">
-                                <label>Project Interest</label>
-                                <select>
-                                    <option>Bioclimatic Pergola</option>
-                                    <option>Outdoor Kitchen</option>
-                                    <option>Retractable Roof</option>
-                                    <option>Custom Architectural Project</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>About Your Business</label>
-                                <select>
-                                    <option>Individual</option>
-                                    <option>Distributor</option>
-                                    <option>Contractor</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Purpose of Inquiry</label>
-                                <select>
-                                    <option>Personal Use</option>
-                                    <option>Wholesale/Partnership</option>
-                                    <option>Project Requirement</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Current Project Stage</label>
-                                <select>
-                                    <option>Market Research</option>
-                                    <option>Design Stage</option>
-                                    <option>Quotation Stage</option>
-                                    <option>Urgent Need</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label>Your Message</label>
-                                <textarea rows="6" placeholder="Please tell me more detailshe dimensions, series, address...."></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            Send Message <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+                <!-- News 9: 2022 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H8b07a904b66a4355a9dd0bb801f6e626d.jpg');">
+                        <span class="news-tag">Event</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">February 18, 2022</div>
+                        <h3>Brealu Group at the California Design Expo</h3>
+                        <p>Showcasing our latest 6063-T5 aluminum innovations and 2022 custom color palettes. A recap of North American market trends.</p>
+                        <a href="brealu-outdoor-pergola-exhibition-california-expo-2026.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 10: 2021 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H19fb46cde56a4b138ac277c824baaac2b.jpg');">
+                        <span class="news-tag">R&D</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">August 14, 2021</div>
+                        <h3>European R&D Center: A Munich Partnership</h3>
+                        <p>Brealu Group partners with leading German designers to co-develop the next generation of silent-drive motor systems.</p>
+                        <a href="german-engineering-pergola-rd-testing-center-munich.html" class="read-more">Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 11: 2020 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H8d921243cf474cef88179130c88700c3H.jpg');">
+                        <span class="news-tag">Global</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">November 05, 2020</div>
+                        <h3>Middle East Infrastructure: Engineering for 50°C+</h3>
+                        <p>Reflecting on our large-scale infrastructure projects in the UAE and Qatar. Custom thermal-break technology for extreme heat.</p>
+                        <a href="bioclimatic-pergola-projects-middle-east-market-growth.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 12: 2019 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/Hd084ea5c3d36493ebe423390d77a5d28x.jpg');">
+                        <span class="news-tag">Logistics</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">June 22, 2019</div>
+                        <h3>Global Logistics: Reliable Shipping to 150+ Countries</h3>
+                        <p>How we perfected our international supply chain to deliver zero-damage architectural systems to every continent.</p>
+                        <a href="global-pergola-shipping-and-logistics-delivery-solutions.html" class="read-more">Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
             </div>
-        </div>
-    </section>
 
-    <!-- Network Section -->
-    <section class="network-section">
-        <div class="container">
-            <h2>Our Global Network</h2>
-            <p style="opacity:0.6;">Delivering precision engineering to 150+ countries worldwide.</p>
-            <img src="https://sc02.alicdn.com/kf/A0f28a964b01f42fd88d0c164eed0cd63M.png" alt="Global Network Map" class="network-map">
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="latest-pergola-industry-news-and-design-insights.html" class="page-btn">1</a>
+                <a href="latest-outdoor-living-news-and-industry-updates-p2.html" class="page-btn active">2</a>
+                <a href="latest-pergola-industry-news-and-design-insights.html" class="page-btn"><i class="fas fa-chevron-left"></i></a>
+            </div>
         </div>
     </section>
 

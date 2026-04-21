@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/contact.html">
+    <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/latest-pergola-industry-news-and-design-insights.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Brealu Outdoor - Premium Architectural Solutions</title>
-    <meta name="description" content="Get in touch with Brealu Outdoor. Professional consultation for premium aluminum pergola systems and modular outdoor kitchens. Worldwide shipping since 1995.">
+    <title>News & Insights | Brealu Outdoor - Engineering the Future of Outdoor Living</title>
+    <meta name="description" content="Stay updated with Brealu Outdoor. Industry trends, technical breakthroughs in pergola engineering, and global project highlights since 1995.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,64 +130,96 @@
 
         @keyframes navFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .btn-primary {
-            background: var(--primary);
-            color: white !important;
-            padding: 12px 28px;
-            border-radius: 100px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 74, 153, 0.2);
-        }
-
         /* --- Hero Section --- */
-        .contact-hero { 
-            padding: 240px 0 100px; 
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('https://sc02.alicdn.com/kf/Acd1c97bd11a64f72a44b146601625fec0.png');
+        .news-hero { 
+            padding-top: 240px; 
+            padding-bottom: 80px; 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('https://sc01.alicdn.com/kf/H2b4c22acf58e4945855f581d7248dfd2s.jpg');
             background-size: cover;
-            background-position: center top;
-            text-align: center; 
+            background-position: center;
+            text-align: center;
             color: white;
         }
-        .contact-hero h1 { font-family: 'Outfit', sans-serif; font-size: 4.5rem; font-weight: 800; letter-spacing: -2px; margin-bottom: 24px; color: white; }
-        .contact-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto; }
+        .news-hero h1 { font-family: 'Outfit', sans-serif; font-size: 4rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -2px; color: white; }
+        .news-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto; }
 
-        /* --- Contact Content --- */
-        .section { padding: 120px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
-        
-        /* Info Side */
-        .contact-info h2 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; margin-bottom: 32px; }
-        .info-item { display: flex; gap: 24px; margin-bottom: 40px; }
-        .info-icon { width: 64px; height: 64px; background: rgba(0, 74, 153, 0.05); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem; flex-shrink: 0; }
-        .info-content h3 { font-size: 1.1rem; margin-bottom: 8px; }
-        .info-content p { color: var(--gray); font-size: 1rem; }
-        .social-links { display: flex; gap: 16px; margin-top: 20px; }
-        .social-btn { width: 48px; height: 48px; border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--dark); transition: var(--transition); text-decoration: none; }
-        .social-btn:hover { background: var(--primary); color: white; border-color: var(--primary); }
+        /* --- News Grid --- */
+        .section { padding: 80px 0 120px; }
+        .news-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 40px; 
+        }
+        .news-card { 
+            background: white; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
+            border-color: var(--primary);
+        }
+        .news-img { 
+            height: 240px; 
+            background-size: cover; 
+            background-position: center top; 
+            position: relative;
+        }
+        .news-tag { 
+            position: absolute; 
+            top: 20px; 
+            left: 20px; 
+            padding: 6px 14px; 
+            background: var(--primary); 
+            color: white; 
+            border-radius: 8px; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            text-transform: uppercase;
+        }
+        .news-body { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-date { font-size: 0.85rem; color: var(--gray); margin-bottom: 12px; font-weight: 500; }
+        .news-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: var(--dark); margin-bottom: 16px; line-height: 1.3; }
+        .news-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 24px; flex-grow: 1; }
+        .read-more { 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            color: var(--primary); 
+            font-weight: 700; 
+            text-decoration: none; 
+            font-size: 0.95rem;
+        }
+        .read-more i { transition: var(--transition); }
+        .read-more:hover i { transform: translateX(5px); }
 
-        /* Form Side */
-        .contact-form-box { background: white; padding: 60px; border-radius: 32px; border: 1px solid var(--border); box-shadow: 0 40px 80px rgba(15, 23, 42, 0.05); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .form-group { margin-bottom: 24px; }
-        .full-width { grid-column: span 2; }
-        label { display: block; font-weight: 700; margin-bottom: 10px; font-size: 0.9rem; color: var(--dark); }
-        input, select, textarea { width: 100%; padding: 16px; border: 1px solid var(--border); border-radius: 12px; font-family: 'Inter', sans-serif; font-size: 1rem; transition: var(--transition); background: var(--light); }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(0, 74, 153, 0.05); }
-        .submit-btn { width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 12px; font-weight: 800; font-size: 1.1rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 12px; }
-        .submit-btn:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 74, 153, 0.2); }
-
-        /* --- Global Network Map --- */
-        .network-section { background: var(--dark); padding: 120px 0; color: white; text-align: center; }
-        .network-section h2 { font-family: 'Outfit', sans-serif; font-size: 3rem; margin-bottom: 24px; }
-        .network-map { width: 100%; max-width: 1000px; margin: 60px auto 0; border-radius: 24px; }
+        /* --- Pagination --- */
+        .pagination { 
+            margin-top: 60px; 
+            display: flex; 
+            justify-content: center; 
+            gap: 12px; 
+        }
+        .page-btn { 
+            width: 48px; 
+            height: 48px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid var(--border); 
+            border-radius: 12px; 
+            color: var(--dark); 
+            font-weight: 600; 
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        .page-btn:hover:not(.active) { border-color: var(--primary); color: var(--primary); }
 
         /* --- Footer --- */
         footer { background: var(--dark); color: white; padding: 100px 0 60px; }
@@ -202,12 +234,14 @@
         .footer-social a { color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: var(--transition); }
         .footer-social a:hover { color: white; transform: translateY(-3px); }
         .footer-bottom { margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; font-size: 0.85rem; color: rgba(255,255,255,0.3); }
-        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; } }
 
         @media (max-width: 1024px) {
-            .contact-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 3rem; }
+            .news-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+            .news-grid { grid-template-columns: 1fr; }
+            .news-hero h1 { font-size: 2.5rem; }
         }
     
         
@@ -280,137 +314,116 @@
                 </div>
                 <div class="nav-item"><a href="outdoor-pergola-projects-gallery.html">Projects</a></div>
                 <div class="nav-item"><a href="brealu-outdoor-manufacturer-story.html">Our Story</a></div>
-                <div class="nav-item"><a href="latest-pergola-industry-news-and-design-insights.html">News</a></div>
+                <div class="nav-item"><a href="latest-pergola-industry-news-and-design-insights.html" style="color:var(--primary)">News</a></div>
                 <div class="nav-item"><a href="reviews.html">Reviews</a></div>
-                <div class="nav-item"><a href="contact.html" style="color:var(--primary)">Contact Us</a></div>
-            
+                
+                <div class="nav-item"><a href="contact.html">Contact Us</a></div>
                 
             </nav>
-            <a href="contact.html" class="btn-primary" style="padding: 10px 24px; color: white;">Start Design</a>
+            <a href="contact.html" class="btn btn-primary" style="padding: 10px 24px; color: white;">Start Design</a>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="contact-hero">
+    <!-- Hero Section -->
+    <section class="news-hero">
         <div class="container">
-            <h1>Start Your Architectural Journey</h1>
-            <p>Whether you're an architect, developer, or homeowner, our engineering team is ready to provide the professional support your project deserves.</p>
+            <h1>News & Technical Insights</h1>
+            <p>Exploring the intersection of architectural design and precision aluminum engineering since 1995.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- News Grid -->
     <section class="section">
         <div class="container">
-            <div class="contact-grid">
+            <!-- PAGE 1 (Current) -->
+            <div class="news-grid" id="news-page-1">
                 
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-phone"></i></div>
-                        <div class="info-content">
-                            <h3>Phone & WhatsApp</h3>
-                            <p>+86 178 1258 1015</p>
-                            <p>Direct Engineering Support Line</p>
-                        </div>
+                <!-- News 1: 2026 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/Hacab0514c909494f83f4ceb5f76c0909b.jpg');">
+                        <span class="news-tag">Technical</span>
                     </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="info-content">
-                            <h3>Email Inquiry</h3>
-                            <p>boaz@brealuoutdoor.com</p>
-                            <p>Response within 24 hours</p>
-                        </div>
+                    <div class="news-body">
+                        <div class="news-date">April 15, 2026</div>
+                        <h3>The Science of RAL 1015: Custom Color Durability</h3>
+                        <p>Why architects are choosing specialized powder coatings for Mediterranean coastal projects. A look into UV resistance and gloss retention.</p>
+                        <a href="custom-pergola-colors-ral-1015-ivory-finishing-options.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </article>
 
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-location-dot"></i></div>
-                        <div class="info-content">
-                            <h3>Manufacturing Base</h3>
-                            <p>Foshan, Guangdong, China</p>
-                            <p>The global hub for precision aluminum engineering.</p>
-                        </div>
+                <!-- News 2: 2025 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/Had2da31e32c54700a87859b277c6ffdeS.jpg');">
+                        <span class="news-tag">Engineering</span>
                     </div>
-
-                    <div class="social-links">
-                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    <div class="news-body">
+                        <div class="news-date">November 20, 2025</div>
+                        <h3>Snow Load Calculation for Arctic-Spec Systems</h3>
+                        <p>How we engineer the BRE-E220 series to withstand Canadian winters. Understanding structural rib reinforcement and double-layer glass performance.</p>
+                        <a href="heavy-snow-load-pergola-engineering-testing-report.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="contact-form-box">
-                    <form>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" placeholder="john@company.com">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="text" placeholder="+1 (555) 000-0000">
-                            </div>
-                            <div class="form-group">
-                                <label>Project Interest</label>
-                                <select>
-                                    <option>Bioclimatic Pergola</option>
-                                    <option>Outdoor Kitchen</option>
-                                    <option>Retractable Roof</option>
-                                    <option>Custom Architectural Project</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>About Your Business</label>
-                                <select>
-                                    <option>Individual</option>
-                                    <option>Distributor</option>
-                                    <option>Contractor</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Purpose of Inquiry</label>
-                                <select>
-                                    <option>Personal Use</option>
-                                    <option>Wholesale/Partnership</option>
-                                    <option>Project Requirement</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Current Project Stage</label>
-                                <select>
-                                    <option>Market Research</option>
-                                    <option>Design Stage</option>
-                                    <option>Quotation Stage</option>
-                                    <option>Urgent Need</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label>Your Message</label>
-                                <textarea rows="6" placeholder="Please tell me more detailshe dimensions, series, address...."></textarea>
-                            </div>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            Send Message <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+                <!-- News 3: 2025 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/Heed4f024a18749a392accffcf16648aeo.jpg');">
+                        <span class="news-tag">Corporate</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">January 10, 2025</div>
+                        <h3>30 Years of Innovation: Celebrating the 1995 Legacy</h3>
+                        <p>How three decades of manufacturing expertise have shaped the modern outdoor living landscape. Reflections from our senior engineering team.</p>
+                        <a href="leading-aluminum-pergola-manufacturer-30-years-legacy.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 4: 2024 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/Hb895663812e84998911a997c16a1605fU.jpg');">
+                        <span class="news-tag">Award</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">May 22, 2024</div>
+                        <h3>BRE-220 Wins International Design Excellence Award</h3>
+                        <p>The BRE-220 series recognized for its seamless blend of architectural aesthetics and high-tensile structural engineering.</p>
+                        <a href="award-winning-modern-pergola-design-innovations.html" class="read-more">Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 5: 2024 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H07a84a96e5f34e889dd66978c0845523r.jpg');">
+                        <span class="news-tag">Case Study</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">March 10, 2024</div>
+                        <h3>Urban High-Rise: Managing Wind Uplift in Shanghai</h3>
+                        <p>A technical deep dive into the Lujiazui Skyline project. Solving the challenges of high-altitude wind resistance for residential penthouses.</p>
+                        <a href="hurricane-resistant-pergola-wind-load-performance-test.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- News 6: 2023 -->
+                <article class="news-card">
+                    <div class="news-img" style="background-image: url('https://sc01.alicdn.com/kf/H28c6c98e9a3b43b5a5b9d80bff834ceaC.jpg');">
+                        <span class="news-tag">Design</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">September 05, 2023</div>
+                        <h3>Integrating Bioclimatic Shutters in London Terraces</h3>
+                        <p>Optimizing privacy and airflow in high-density urban environments. Why the BRE-220 shutter system is the new standard for London luxury.</p>
+                        <a href="aluminum-shutter-pergola-installations-london-projects.html" class="read-more">Full Analysis <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
             </div>
-        </div>
-    </section>
 
-    <!-- Network Section -->
-    <section class="network-section">
-        <div class="container">
-            <h2>Our Global Network</h2>
-            <p style="opacity:0.6;">Delivering precision engineering to 150+ countries worldwide.</p>
-            <img src="https://sc02.alicdn.com/kf/A0f28a964b01f42fd88d0c164eed0cd63M.png" alt="Global Network Map" class="network-map">
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="latest-pergola-industry-news-and-design-insights.html" class="page-btn active">1</a>
+                <a href="latest-outdoor-living-news-and-industry-updates-p2.html" class="page-btn">2</a>
+                <a href="latest-outdoor-living-news-and-industry-updates-p2.html" class="page-btn"><i class="fas fa-chevron-right"></i></a>
+            </div>
         </div>
     </section>
 

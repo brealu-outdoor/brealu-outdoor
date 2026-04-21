@@ -1,3 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
+
 Sitemap: https://www.brealuoutdoor.com/sitemap.xml

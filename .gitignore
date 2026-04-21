@@ -4,3 +4,6 @@ github_credentials.txt
 *.pdf
 brochure_images/
 .accio/
+node_modules/
+Downloads/
+diary/
