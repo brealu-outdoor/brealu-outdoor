@@ -1,0 +1,23 @@
+# Brealu Outdoor - 301 redirects for legacy URLs (GSC 404 cleanup)
+
+# Legacy multi-language directories -> English root
+/fr/*            https://www.brealuoutdoor.com/:splat  301
+/de/*            https://www.brealuoutdoor.com/:splat  301
+/es/*            https://www.brealuoutdoor.com/:splat  301
+
+# Legacy page names -> current SEO URLs
+/pergola-v3-alunotec.html          /aluminum-pergola-product-catalog.html  301
+/pergola-bre-r230.html             /motorized-retractable-pergola-r230-collection.html  301
+/pergola-bre-220.html              /heavy-duty-aluminum-pergola-220-collection.html  301
+/pergola-bre-175u.html             /bioclimatic-louvered-pergola-175u-collection.html  301
+/pergola-bre-140u.html             /aluminum-pergola-kit-140u-collection.html  301
+/index-v2.html                     /index.html  301
+/bre-220.html                      /heavy-duty-aluminum-pergola-220-collection.html  301
+/bre-r230.html                     /motorized-retractable-pergola-r230-collection.html  301
+/bre-175u.html                     /bioclimatic-louvered-pergola-175u-collection.html  301
+/bre-140u.html                     /aluminum-pergola-kit-140u-collection.html  301
+/outdoor-kitchen-v1.html           /outdoor-kitchens.html  301
+/pergola-comparison.html           /pergola-model-comparison-guide.html  301
+/pergola-optional-addons.html      /pergola-addons.html  301
+/news.html                         /latest-pergola-industry-news-and-design-insights.html  301
+/projects.html                     /outdoor-pergola-projects-gallery.html  301

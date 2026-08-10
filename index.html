@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="canonical" href="https://www.brealuoutdoor.com/index.html" />
     <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/index.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1924,26 +1925,30 @@ footer { background: var(--dark); color: white; padding: 100px 0 60px; }
                 <!-- Right: Structured Form -->
                 <div class="inquiry-form-card">
                     <h3><i class="fas fa-file-signature"></i> Project Inquiry Form</h3>
-                    <form action="thank-you.html" class="structural-form">
+                    <form action="https://formsubmit.co/boaz@brealuoutdoor.com" method="POST" class="structural-form">
+                        <input type="hidden" name="_subject" value="[Brealu Website] New Project Inquiry">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://www.brealuoutdoor.com/thank-you.html">
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
                             <div class="form-group">
                                 <label>Full Name</label>
-                                <input type="text" class="form-control" placeholder="Required" required>
+                                <input type="text" name="full_name" class="form-control" placeholder="Required" required>
                             </div>
                             <div class="form-group">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="email@company.com" required>
+                                <input type="email" name="email" class="form-control" placeholder="email@company.com" required>
                             </div>
                         </div>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="+00 000 000 0000" required>
+                                <input type="tel" name="phone" class="form-control" placeholder="+00 000 000 0000" required>
                             </div>
                             <div class="form-group">
                                 <label>Product of Interest</label>
-                                <select class="form-control" required>
+                                <select name="product_of_interest" class="form-control" required>
                                     <option value="" disabled selected>Select Product</option>
                                     <option>Louvered Pergola (BRE Series)</option>
                                     <option>Retractable Roof (R230)</option>
@@ -1956,7 +1961,7 @@ footer { background: var(--dark); color: white; padding: 100px 0 60px; }
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
                             <div class="form-group">
                                 <label>About Your Business</label>
-                                <select class="form-control" required>
+                                <select name="business_type" class="form-control" required>
                                     <option value="" disabled selected>Select Option</option>
                                     <option>Individual</option>
                                     <option>Distributor</option>
@@ -1965,7 +1970,7 @@ footer { background: var(--dark); color: white; padding: 100px 0 60px; }
                             </div>
                             <div class="form-group">
                                 <label>Purpose of Your Inquiry</label>
-                                <select class="form-control" required>
+                                <select name="inquiry_purpose" class="form-control" required>
                                     <option value="" disabled selected>Select Purpose</option>
                                     <option>Personal Use</option>
                                     <option>Wholesale Partnership</option>
@@ -1976,7 +1981,7 @@ footer { background: var(--dark); color: white; padding: 100px 0 60px; }
 
                         <div class="form-group">
                             <label>Current Project Stage</label>
-                            <select class="form-control" required>
+                            <select name="project_stage" class="form-control" required>
                                 <option value="" disabled selected>Select Stage</option>
                                 <option>Market Research</option>
                                 <option>Design Phase</option>
@@ -1987,7 +1992,7 @@ footer { background: var(--dark); color: white; padding: 100px 0 60px; }
 
                         <div class="form-group">
                             <label>Your Message</label>
-                            <textarea class="form-control" rows="4" placeholder="Please tell me more details—the dimensions, series, address...."></textarea>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Please tell me more details—the dimensions, series, address...."></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn">

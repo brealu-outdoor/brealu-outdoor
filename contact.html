@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="canonical" href="https://www.brealuoutdoor.com/contact.html" />
     <link rel="alternate" hreflang="en" href="https://www.brealuoutdoor.com/contact.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -342,23 +343,27 @@
                 </div>
 
                 <div class="contact-form-box">
-                    <form>
+                    <form action="https://formsubmit.co/boaz@brealuoutdoor.com" method="POST">
+                        <input type="hidden" name="_subject" value="[Brealu Website] Contact Form Inquiry">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://www.brealuoutdoor.com/thank-you.html">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label>Full Name</label>
-                                <input type="text" placeholder="John Doe">
+                                <input type="text" name="full_name" placeholder="John Doe">
                             </div>
                             <div class="form-group">
                                 <label>Email Address</label>
-                                <input type="email" placeholder="john@company.com">
+                                <input type="email" name="email" placeholder="john@company.com">
                             </div>
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="text" placeholder="+1 (555) 000-0000">
+                                <input type="text" name="phone" placeholder="+1 (555) 000-0000">
                             </div>
                             <div class="form-group">
                                 <label>Project Interest</label>
-                                <select>
+                                <select name="project_interest">
                                     <option>Bioclimatic Pergola</option>
                                     <option>Outdoor Kitchen</option>
                                     <option>Retractable Roof</option>
@@ -367,7 +372,7 @@
                             </div>
                             <div class="form-group">
                                 <label>About Your Business</label>
-                                <select>
+                                <select name="business_type">
                                     <option>Individual</option>
                                     <option>Distributor</option>
                                     <option>Contractor</option>
@@ -375,7 +380,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Purpose of Inquiry</label>
-                                <select>
+                                <select name="inquiry_purpose">
                                     <option>Personal Use</option>
                                     <option>Wholesale/Partnership</option>
                                     <option>Project Requirement</option>
@@ -383,7 +388,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Current Project Stage</label>
-                                <select>
+                                <select name="project_stage">
                                     <option>Market Research</option>
                                     <option>Design Stage</option>
                                     <option>Quotation Stage</option>
@@ -392,7 +397,7 @@
                             </div>
                             <div class="form-group full-width">
                                 <label>Your Message</label>
-                                <textarea rows="6" placeholder="Please tell me more detailshe dimensions, series, address...."></textarea>
+                                <textarea name="message" rows="6" placeholder="Please tell me more detailshe dimensions, series, address...."></textarea>
                             </div>
                         </div>
                         <button type="submit" class="submit-btn">
